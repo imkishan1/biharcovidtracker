@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Meta tags -->
+
+    <meta property="og:url" content=""/>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="CovidStatsBihar | Real Time Covid Tracker"/>
+    <meta name="description" content="Get the latest Updates on Covid19 in Bihar, new cases, active cases everything you need to know."/>
+    <meta property="og:image" itemprop="image" content="https://images.unsplash.com/photo-1584483766114-2cea6facdf57?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"/>
+    <meta property="og:description" content="Get the latest Updates on Covid19 in Bihar, new cases, active cases everything you need to know.">
+    <meta property="og:site_name" content=""/>
+    <!--// Meta tags -->
+    <link rel="shortcut icon" type="image/png" href="icon.png">
+    <!-- Bootstrap -->
+
+
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Roboto&display=swap" rel="stylesheet">
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <!-- //Bootstrap -->
+    <!-- Font Awsome -->
+    <link
+      rel="preconnect"
+      href="path/to/font-awesome/css/font-awesome.min.css"/>
+    <!-- //Font Awsome -->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="CSS/style.css" />
+    <!--// CSS -->
+
+    <title>Bihar Covid-19 Tracker</title>
+  </head>
+
+  <body>
+<div class="page-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="title">Bihar Covid-19 Tracker</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="maindata">
+                    <div class="row">
+                    <div class="col-lg-3 col-sm-6 col-xs-6">
+                    <div class="sqrcards">
+                        <div class="elements">
+                          <div class="data">
+                              <span id="deltacnf" class="confr">+0</span>
+                              <p id="conf" class="confr">0</p>
+                          </div>
+                        <div class="cardheading">
+                            <h4>Confirmed</h4>
+                        </div>
+                    </div>
+                    <div class="border-s" id="conf-color"></div>
+                    </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 col-xs-6">
+                    <div class="sqrcards">
+                        <div class="elements">
+                          <div class="data">
+                              <p id="active" class="active">0</p>
+                          </div>
+                        <div class="cardheading">
+                          <span></span>
+                            <h4>Active</h4>
+                        </div>
+                    </div>
+                    <div class="border-s" id="conf-color"></div>
+                    </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 col-xs-6">
+                    <div class="sqrcards">
+                        <div class="elements">
+                          <div class="data">
+                              <span id="deltarecov" class="recover">+0</span>
+                              <p id="recovered" class="recover">0</p>
+                          </div>
+                          <div class="cardheading">
+                            <h4>Recovered</h4>
+                        </div>
+                    </div>
+                    <div class="border-s" id="conf-color"></div>
+                    </div>
+                    </div>
+
+
+                    <div class="col-lg-3 col-sm-6 col-xs-6">
+                    <div class="sqrcards">
+                        <div class="elements">
+                          <div class="data">
+                              <span id="deltadeaths">+0</span>
+                              <p id="deaths" class="deaths">0</p>
+                          </div>
+                        <div class="cardheading">
+                            <h4>Deceased</h4>
+                        </div>
+                    </div>
+                    <div class="border-s" id="conf-color"></div>
+                    </div>
+                    </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="table-responsive">
+            <table>
+              <thead>
+                <tr class="tablerow">
+                  <th  class="fixedright">District</th>
+                  <th>Confirmed</th>
+                  <th>Active</th>
+                  <th>Recovered</th>
+                  <th>Deceased</th>
+                  <th>Vaccine Doses Administered</th>         
+                  <th>Tested</th>
+                  <th>Population</th>            
+                </tr>
+              </thead>
+              <tbody id="bihar">
+                
+              </tbody>
+            </table>
+            </div>
+    </div>
+</div>
+    </div>
+</div>
+
+    <footer>
+        <div class="footer-element">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6">
+                <p>Made by Kisalaya&nbsp;| Powered by <a href="http://Covid19india.org" target="_blank">Covid19india.org</a></p>
+              </div>
+              <div class="col-lg-6">
+                <div class="icons-set2">
+                  <a href="https://www.linkedin.com/in/kisalaya-kishan-442858192/" target="_blank"><i
+                      class="fab fa-linkedin-in"></i></a>
+                  <a href="https://www.instagram.com/imkishan01/" target="_blank"><i class="fab fa-instagram"></i></a>
+                  <a href="https://github.com/imkishan1" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </body>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+  crossorigin="anonymous"
+></script>
+<script src="https://use.fontawesome.com/ff15909ecd.js"></script>
+<script
+  src="https://kit.fontawesome.com/340a598582.js"
+  crossorigin="anonymous"
+></script>
+      <script
+  src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+  crossorigin="anonymous"
+></script>
+    <script src="JS/gridchart.js"></script>   
+
+</html>
