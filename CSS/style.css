@@ -241,7 +241,7 @@ footer .footer-element p a {
 }
 
 .sqrcards .elements {
-    padding: 20px;
+    padding: 5px;
     /* height:160px; */
     /* border: 1px solid blue; */
 }
@@ -417,7 +417,7 @@ tr:hover td{
     max-width: 350px;
     height: 40px;
     outline: none;
-    border-radius: 6px;
+    border-radius: 3px;
     padding: 10px;
     margin: 0 auto;
     margin-bottom: 20px;
@@ -459,4 +459,17 @@ tr:hover td{
 .card-rectangle .rec-elements a{
     text-decoration: none;
     font-size: 16px;
+}
+
+.col-lg-3 {
+    padding:0;
+    margin: 0px;
+}
+.col-xs-6 {
+    padding: 0;
+    margin: 0px;
+}
+
+.col-sm-6 {
+    margin: 0px;
 }
