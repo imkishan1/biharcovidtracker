@@ -34,7 +34,7 @@ for(var i=0;i<lengdist;i++)
   var conf = dis[districts[i]].total.confirmed;
   var rec = dis[districts[i]].total.recovered;
   var active = conf-rec;
-if(dis[districts[i]].delta.confirmed == null)
+if(dis[districts[i]].delta.confirmed != null)
 {
     if(dis[districts[i]].delta.deceased == null)
     {
