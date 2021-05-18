@@ -329,7 +329,7 @@ table {
     width: fit-content;
     margin: 0 auto;
     font-size: 13px;
-    margin-bottom: 30px;
+    /* margin-bottom: 10px; */
     /* transition: 0.5s; */
     transition-delay: 4s;
    
@@ -439,7 +439,7 @@ tr:hover td{
   
     /* border-radius: 5px; */
      max-width: 390px;
-     margin-bottom: 20px;
+     margin-bottom: 30px;
      transition: 0.2s ease-in-out;
      cursor: pointer;
      height: 50px;
