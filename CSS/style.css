@@ -202,11 +202,7 @@ footer .footer-element p a {
 
 @media only screen and (max-width: 361px) {
     
-    .mapcard {
-        /* border: 1px solid red; */
-        min-width: 300px;
-        max-width: 350px;
-    }
+
     footer {
         padding-bottom: 20px;
     }
@@ -216,24 +212,7 @@ footer .footer-element p a {
 
 
 /* Average Card */
-.sqr-card {
-    /* border: 2px solid red; */
-  
-    border-radius: 5px;
-    max-width: 220px;
-    min-width: 220px;
-    /* min-height: 220px; */
-    /* max-height: 220px; */
-    /* background-color: #31364686; */
-    background-color: #b5b5b8;
 
-    overflow: hidden;
-    margin: 0 auto;
-    position: relative;
-    cursor: pointer;
-    color: var(--newcases);
-       
-}
 .maindata {
     margin: 0 auto;
     margin-bottom: 30px;
@@ -299,50 +278,7 @@ footer .footer-element p a {
     height: 5px;
     /* background-color:var(--newcases); */
 }
- .sqr-ele {
-    /* border: 2px solid green; */
-width: fit-content;
-padding: 18px;
 
-}
-
-.sqr-ele .elec-group {
-    /* border: 1px solid honeydew; */
-    /* margin-top: 45px; */
-    height: fit-content;
-    
-
-
-}
-
-
-.sqr-card .first-title {
-    /* border: 2px/ solid blue; */
-}
-
-.sqr-card .sqr-ele .para p{
-        font-size: 14px;
-        font-weight: 300;
-        color: rgb(185, 184, 184);
-        height: fit-content;
-        margin-bottom: 0px;
-        /* margin-top: 16px; */
-        
-}
-
-.sqr-card .redborder {
-    /* border: 2px solid pink; */
-    width: 220px;
-    margin: 0 auto;
-    clear: both;
-  
-    /* padding: 0px; */
-   z-index: -10;
-    height:15px;
-   
-    /* transform: translateY(65px); */
-    
-}
 .deaths {
 color: var(--deceased) !important;
 }
@@ -367,35 +303,7 @@ color: var(--deceased) !important;
     font-size: 22px;
     color:   var(--deceased);
 }
-#avg-last {
-    font-size: 22px;
-    color:  var(--newcases);
-}
 
-#color-3 {
-    background-color:var(--deceased);
-    margin-top:10px;
-}
-
-#color-2 {
-    background-color:var(--recovered);
-    margin-top:10px;
-}
-
-#color-1 {
-    background-color: var(--newcases);
-    margin-top:10px;
-}
-
-#color-4 {
-    background-color: var(--active);
-    margin-top:0px;
-}
-
-#crowd-para {
-    font-size: 12px;
-     /* color: red; */
-}
 
 .elec-group a {
     text-decoration: none;
@@ -413,30 +321,7 @@ color: var(--deceased) !important;
 
 
 
-.mapcard {
-    /* border: 1px solid red; */
-    margin: 0 auto;
-    min-width: 100%;
-    max-width: 100%;
-    padding: 6px;
-    height: fit-content;
-    border-radius: 3px;
-    margin-bottom: 15px;
-    padding-top:20px ;
-    background-color: rgba(108, 117, 125, 0.11);
-    
-}
-.mapcard .chart-elements {
-    /* border: 1px solid red; */
-}
 
-.mapcard .chart-elements .mychart {
-    width:500px;
-    align-items: center;
-    justify-content: center;
-    /* height: 160%; */
-    /* border: 1px solid salmon; */
-}
 
 table {
     width: fit-content;
@@ -445,7 +330,7 @@ table {
     margin-bottom: 30px;
     /* transition: 0.5s; */
     transition-delay: 4s;
-    box-shadow: 10px 8px 20px ;
+   
     /* border: 1px solid blue; */
         /* padding: 10px; */     
 }
@@ -462,7 +347,7 @@ table {
     /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
     /* background-color: var(--background-dark-blue); */
    
-    background-color: rgb(243, 239, 239);
+    background-color: rgb(245, 243, 243);
     min-width: 120px;
     max-width: 120px;
     padding: 10px;
