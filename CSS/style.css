@@ -438,7 +438,7 @@ tr:hover td{
 .card-rectangle.size2{
   
     /* border-radius: 5px; */
-     max-width: 390px;
+     max-width: 360px;
      margin-bottom: 30px;
      transition: 0.2s ease-in-out;
      cursor: pointer;
