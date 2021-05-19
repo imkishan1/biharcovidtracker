@@ -367,7 +367,7 @@ table {
 }
 tr:hover td{
     transition: 0.2s all ease-in-out;
-    background-color: rgb(243, 239, 239) !important;
+    background-color: rgb(245, 243, 243) !important;
 }
 .tablerow td {
    
