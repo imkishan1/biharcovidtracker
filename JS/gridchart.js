@@ -28,6 +28,35 @@ async function getcovidapiInf(){
     'Supaul','Vaishali','West Champaran'
 ]
 console.log(dis);
+for(var i=0;i<size;i++)
+{
+  if(dataforchart[i].statecode=='BR')
+  {
+  //  console.log(dataforchart[i].confirmed);
+   const totalconfirmed = document.getElementById('conf');
+   totalconfirmed.innerText = `${dataforchart[i].confirmed.replace(/(\d)(?=(\d\d)+\d$)/g, "$1,")}`;
+
+   const deltaconf = document.getElementById('deltacnf');
+   deltaconf.innerText = `+${dataforchart[i].deltaconfirmed.replace(/(\d)(?=(\d\d)+\d$)/g, "$1,")}`;
+
+   const totalactive = document.getElementById('active');
+   totalactive.innerText = `${dataforchart[i].active.replace(/(\d)(?=(\d\d)+\d$)/g, "$1,")}`;
+
+   const totalrecoverd = document.getElementById('recovered');
+   totalrecoverd.innerText = `${dataforchart[i].recovered.replace(/(\d)(?=(\d\d)+\d$)/g, "$1,")}`;
+
+   const deltarecov = document.getElementById('deltarecov');
+   deltarecov.innerText = `+${dataforchart[i].deltarecovered.replace(/(\d)(?=(\d\d)+\d$)/g, "$1,")}`;
+
+   const deaths = document.getElementById('deaths');
+   deaths.innerText = `${dataforchart[i].deaths.replace(/(\d)(?=(\d\d)+\d$)/g, "$1,")}`;
+
+   const deltadeaths = document.getElementById('deltadeaths');
+   deltadeaths.innerText = `+${dataforchart[i].deltadeaths.replace(/(\d)(?=(\d\d)+\d$)/g, "$1,")}`;
+
+
+  }
+}
 const bihar = document.getElementById('bihar');
 for(var i=0;i<lengdist;i++)
 {
@@ -86,35 +115,7 @@ else {
    bihar.innerHTML += template;
 }
 }
-for(var i=0;i<size;i++)
-{
-  if(dataforchart[i].statecode=='BR')
-  {
-  //  console.log(dataforchart[i].confirmed);
-   const totalconfirmed = document.getElementById('conf');
-   totalconfirmed.innerText = `${dataforchart[i].confirmed.replace(/(\d)(?=(\d\d)+\d$)/g, "$1,")}`;
 
-   const deltaconf = document.getElementById('deltacnf');
-   deltaconf.innerText = `+${dataforchart[i].deltaconfirmed.replace(/(\d)(?=(\d\d)+\d$)/g, "$1,")}`;
-
-   const totalactive = document.getElementById('active');
-   totalactive.innerText = `${dataforchart[i].active.replace(/(\d)(?=(\d\d)+\d$)/g, "$1,")}`;
-
-   const totalrecoverd = document.getElementById('recovered');
-   totalrecoverd.innerText = `${dataforchart[i].recovered.replace(/(\d)(?=(\d\d)+\d$)/g, "$1,")}`;
-
-   const deltarecov = document.getElementById('deltarecov');
-   deltarecov.innerText = `+${dataforchart[i].deltarecovered.replace(/(\d)(?=(\d\d)+\d$)/g, "$1,")}`;
-
-   const deaths = document.getElementById('deaths');
-   deaths.innerText = `${dataforchart[i].deaths.replace(/(\d)(?=(\d\d)+\d$)/g, "$1,")}`;
-
-   const deltadeaths = document.getElementById('deltadeaths');
-   deltadeaths.innerText = `+${dataforchart[i].deltadeaths.replace(/(\d)(?=(\d\d)+\d$)/g, "$1,")}`;
-
-
-  }
-}
 
 }
 getcovidapiInf();
