@@ -184,7 +184,12 @@ footer .footer-element p a {
         color: inherit;
         cursor: pointer;
     }
-
+.title{
+    font-size: 22px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    
+}
     
     /* //footer */
     .icons-set2 i {
