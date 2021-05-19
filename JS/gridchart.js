@@ -15,10 +15,10 @@ async function getcovidapiInf(){
     const dataj = await jsondata3.json();
     dataforchart.splice(31, 1);
 
-    console.log(dataj);
+    // console.log(dataj);
     const dis = dataj['BR'].districts;
     const lengdist = Object.keys(dis).length;
-    console.log(lengdist);
+    console.log(dis);
     var districts = ['Araria','Arwal', 'Aurangabad','Banka','Begusarai','Bhagalpur','Bhojpur','Buxar','Darbhanga',
     'East Champaran','Gaya','Gopalganj','Jamui','Jehanabad',
     'Kaimur','Katihar','Khagaria','Kishanganj','Lakhisarai',
@@ -27,12 +27,12 @@ async function getcovidapiInf(){
     'Sheikhpura','Sheohar','Sitamarhi','Siwan',
     'Supaul','Vaishali','West Champaran'
 ]
-console.log(dis);
+
 for(var i=0;i<size;i++)
 {
   if(dataforchart[i].statecode=='BR')
   {
-  //  console.log(dataforchart[i].confirmed);
+   console.log(dataforchart[i].confirmed);
    const totalconfirmed = document.getElementById('conf');
    totalconfirmed.innerText = `${dataforchart[i].confirmed.replace(/(\d)(?=(\d\d)+\d$)/g, "$1,")}`;
 
@@ -65,7 +65,6 @@ for(var i=0;i<lengdist;i++)
   var active = conf-rec;
 if(dis[districts[i]].delta.confirmed != null)
 {
-  console.log("We are in if part")
     if(dis[districts[i]].delta.deceased == null)
     {
      
@@ -85,7 +84,6 @@ if(dis[districts[i]].delta.confirmed != null)
     }
   
     var template = `<tr class="tablerow">
-                
                      <td class="fixedright color">${districts[i]}</td>
                      <td class="dataletterspacing" > <span class="delta-confirmed"><i class="fas fa-arrow-up"></i>${dis[districts[i]].delta.confirmed.toLocaleString('en-IN')}</span><br>${dis[districts[i]].total.confirmed.toLocaleString('en-IN')}</td>
                      <td class="dataletterspacing"> ${active.toLocaleString('en-IN')}</td>
@@ -94,15 +92,10 @@ if(dis[districts[i]].delta.confirmed != null)
                      <td class="dataletterspacing"> <span class="delta-confirmed vaccinated"><i class="fas fa-arrow-up"></i>${numDifferentiation(dis[districts[i]].delta.vaccinated)}</span><br>${numDifferentiation(dis[districts[i]].total.vaccinated)}</td>
                      <td class="dataletterspacing"> <span class="delta-confirmed tests"><i class="fas fa-arrow-up"></i>${numDifferentiation(dis[districts[i]].delta.tested)}</span><br>${numDifferentiation(dis[districts[i]].total.tested)}</td>
                      <td class="dataletterspacing"> ${numDifferentiation(dis[districts[i]].meta.population)}</td>
-                     
-                     
-                   
-    
     </tr>`
     bihar.innerHTML += template;
 }
 else {
-  console.log("We are in else part")
   var template = `<tr class="tablerow">
                 
   <td class="fixedright color">${districts[i]}</td>
