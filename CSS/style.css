@@ -196,6 +196,9 @@ footer .footer-element p a {
         transition: 0.2s ease-out;
         /* color: var(--buttons-Boston-before); */
       }
+      .card-rectangle.size2{
+        width: 320px;
+      }
  
     
 }
