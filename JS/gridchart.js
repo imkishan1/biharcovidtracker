@@ -65,6 +65,7 @@ for(var i=0;i<lengdist;i++)
   var active = conf-rec;
 if(dis[districts[i]].delta.confirmed != null)
 {
+  console.log("We are in if part")
     if(dis[districts[i]].delta.deceased == null)
     {
      
@@ -101,6 +102,7 @@ if(dis[districts[i]].delta.confirmed != null)
     bihar.innerHTML += template;
 }
 else {
+  console.log("We are in else part")
   var template = `<tr class="tablerow">
                 
   <td class="fixedright color">${districts[i]}</td>
