@@ -476,3 +476,8 @@ tr:hover td{
 .col-sm-6 {
     margin: 0px;
 }
+
+.icon{
+    width: 50px;
+    transform: translateY(-5px);
+}
