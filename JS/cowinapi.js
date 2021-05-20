@@ -1,13 +1,8 @@
-
-
-console.log(pincode);
 function getstatus()
 {
     var date = document.querySelector('#date').value;
     var pincode = document.querySelector("#pin").value;
-   
-    console.log(date);
-    async function getcowinapidata(a,b){
+       async function getcowinapidata(a,b){
         const url ='https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode='+a+'&date='+b;
         const jsonurl = await fetch(url);
         const getdata = await jsonurl.json();
@@ -31,16 +26,13 @@ function getstatus()
               </div>
             </div>
           </li>`
-          ulid.innerHTML +=card;
+          cardul.innerHTML +=card;
 
         }
     
         
     }
-    console.log(pincode); 
     getcowinapidata(pincode,date);
-    
-console.log("GetStatus Triggred");
 }
 
 
