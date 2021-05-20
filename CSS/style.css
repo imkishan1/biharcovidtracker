@@ -617,6 +617,7 @@ ul li {
     padding: 5px;
     border-radius: 3px;
     margin: 0 auto;
+    margin-bottom: 10px;
 }
 .notfound .notfoundtxt{
     font-size: 12px;
