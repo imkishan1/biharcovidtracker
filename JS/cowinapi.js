@@ -1,5 +1,5 @@
 function getstatus()
-{
+{   
     var date = document.querySelector('#date').value;
     var pincode = document.querySelector("#pin").value;
        async function getcowinapidata(a,b){
@@ -10,6 +10,9 @@ function getstatus()
         const size = Object.keys(getdata.sessions).length;
         console.log(size);
         const cardul = document.getElementById('ulid');
+        var text = "Sorry, No Vaccination center is available for booking.";
+        if(size!=0)
+        {
         for(var i =0;i<size;i++)
         {
             var card = `  <li class="centerdetails">
@@ -32,6 +35,12 @@ function getstatus()
           cardul.innerHTML +=card;
 
         }
+      }
+      else{
+        var card = `<div class="notfound"><p class="notfoundtxt">${text}</p></div>`
+        cardul.innerHTML+=card;
+        console.log("Else");
+      }
     
         
     }

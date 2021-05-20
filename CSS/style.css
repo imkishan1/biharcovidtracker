@@ -611,8 +611,20 @@ ul li {
     font-size: 10px;
     font-weight: 600;
 }
-
-
+.notfound {
+    background-color: rgba(98, 60, 187, 0.521);
+    width: fit-content;
+    padding: 5px;
+    border-radius: 3px;
+    margin: 0 auto;
+}
+.notfound .notfoundtxt{
+    font-size: 12px;
+    color: #fff;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    font-weight: 400;
+}
 
 
 /* Media queries */
