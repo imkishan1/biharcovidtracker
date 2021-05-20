@@ -524,7 +524,7 @@ ul li {
     background-color: #fff;
     border-radius: 4px;
     font-size: 18px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     
 }
 
@@ -712,6 +712,9 @@ ul li {
       width: 320px;
     }
 
+    .circle {     
+        transform: translate(148px,-110px);
+    }
   
 }
 
@@ -733,18 +736,24 @@ ul li {
       /* margin-bottom: 12px; */
       /* font-size: 14px; */
   }
+
   .vaccineslots button{
     margin: 0 auto;
     margin-left: 0px;
     margin-top: 12px;
-}
-.heading {
-    width: 280px;
-    margin-top: 0px;
-}
-.heading h2{
-  font-size: 16px;
-}
+    }
+
+    .heading {
+        width: 280px;
+        margin-top: 0px;
+    }
+    .heading h2{
+    font-size: 16px;
+    }
+    .circle {     
+        transform: translate(130px,-110px);
+    }
+
 }
 
 @media only screen and (max-width: 380px) {
@@ -787,6 +796,9 @@ ul li {
   .maindiv {
       width: 95%;
   }
+  .circle {     
+    transform: translate(125px,-110px);
+}
   
 
 }
