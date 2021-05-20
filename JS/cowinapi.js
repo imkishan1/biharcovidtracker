@@ -25,7 +25,10 @@ function getstatus()
                 <h6 id="slots">${getdata.sessions[i].available_capacity}</h6>
               </div>
             </div>
-          </li>`
+          </li>
+          <div class="circle">
+          <h6>${getdata.sessions[i].min_age_limit+'+'}</h6>
+        </div>`
           cardul.innerHTML +=card;
 
         }
