@@ -131,6 +131,51 @@
           </div>
           </div>
         </div>
+        <div class="maindiv">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="mainheading">
+              <h1>#GetVaccinated</h1>
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <div class="heading">
+              <h2>Search For Vaccine Slots in Your Area by Pincode</h3>
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <div class="vaccineslots">
+              <form action="">
+               <input type="text" placeholder="Enter Pincode" id="pin" class="pininput" name="pincode" required>
+                <br>
+                <input type="date" name="date" id="date"/>
+                <br>
+                <button class="but" type="button" onclick="getstatus()">Check Availabiity</button>
+              </form>
+            </div>
+          </div>
+          <div class="col-lg-12 col-sm-12">
+            <div class="results">
+              <ul class="centernames" id="ulid">
+                <!-- <li class="centerdetails">
+                  <div class="result-element">
+                    <div class="hospitalname">
+                      <h5 id="name">Arrah Sadar</h5>
+                      <div id="add" class="hospital-address">
+                        Lorem ipsum dolor sit amet consectetur 
+                      </div>
+                    </div>
+                    <div class="slotsavail">
+                      <h5>Slots Available</h5>
+                      <h6 id="slots">0</h6>
+                    </div>
+                  </div>
+                </li> -->
+              </ul>
+            </div>
+          </div>
+        </div>
+        </div>
 <div class="row">
     <div class="col-lg-12">
         <div class="table-responsive">
@@ -201,6 +246,7 @@
   integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
   crossorigin="anonymous"
 ></script>
+<script src="JS/cowinapi.js"></script>
     <script src="JS/gridchart.js"></script>   
 
 </html>

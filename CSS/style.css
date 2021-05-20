@@ -5,6 +5,7 @@
 --text:#275961;
 --white-text:#FBF2EA;
 --white-text-light:#fbf2ea88;
+--white-text-grey:#f0f0f0;
 --recovered:#72C217;
 --background-dark-blue:#1e1e30;
 --background-dark-blue2:#232333;
@@ -37,7 +38,7 @@ html {
 body {
     padding: 0;
     margin: 0;
-    color: var(--white-text);
+    color: #6c757d;
    
     background-color: rgba(255, 255, 255, 0.856);
     /* background-color: rgb(17, 17, 17); */
@@ -144,80 +145,6 @@ footer .footer-element p a {
     min-height: 100vh;
 }
 
-/* Media queries */
-@media only screen and (max-width: 800px){
-   
-
-      .fixedright {
-        position: sticky;
-        left: 0;
-    }
-
- 
-
- 
-   
-}
-@media only screen and (max-width: 500px) {
-    footer {
-   
-        height: 140px;
-        padding-top: 40px;
-        padding-bottom: 20px;
-      
-    }
-
-    footer .footer-element p{
-        text-align: center;
-        /* border: 1px solid green; */
-        margin: 0 auto;
-        height: 100%;
-        margin-bottom: 10px;
-        font-size: 15px;
-        font-weight: 300;
-        color: var(--white-text-light);
-    }
-    
-    
-    footer .footer-element p a {
-        text-decoration: none;
-        color: inherit;
-        cursor: pointer;
-    }
-.title{
-    font-size: 22px;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    
-}
-    
-    /* //footer */
-    .icons-set2 i {
-        padding: 6px;
-        margin-left: 10px;
-        font-size: 18px;
-        cursor: pointer;
-        color: var(--sub-headline);
-        transition: 0.2s ease-out;
-        /* color: var(--buttons-Boston-before); */
-      }
-      .card-rectangle.size2{
-        width: 320px;
-      }
- 
-    
-}
-
-@media only screen and (max-width: 361px) {
-    
-
-    footer {
-        padding-bottom: 20px;
-    }
-.col-lg-12 {
-    padding: 5px;
-}
-}
 
 
 
@@ -486,3 +413,363 @@ tr:hover td{
     width: 50px;
     transform: translateY(-5px);
 }
+
+.maindiv {
+    /* border: 1px solid red; */
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding: 30px;
+    width: 89%;
+    border-radius: 4px;
+    /* background-color: rgba(80, 48, 155, 0.192); */
+    /* background-color: rgba(155, 48, 123, 0.192); */
+    background-color: var(--white-text-grey);
+}
+
+.heading {
+    /* border: 1px solid black; */
+    /* width: 340px; */
+    width: 300px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    /* float: right; */
+    padding: 10px;
+}
+
+.heading h2 {
+    font-size: 16px;
+    color: #6c757d;
+    font-weight: 600;
+    text-align: center;
+}
+.vaccineslots {
+    /* border: 1px solid red; */
+    width: 325px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.vaccineslots input {
+    /* border: 1px solid blue; */
+    /* margin: 5px; */
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 8px;
+    margin-bottom: 12px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 400;
+    background-color: rgb(250, 250, 250);
+    color: #6c757d;
+    transition: 0.4s all ease-in-out;
+
+}
+.vaccineslots input:focus {
+    background-color: rgba(255, 255, 255,1);
+    /* border: 1px solid #6c757d70; */
+}
+.vaccineslots button {
+    width: 100%;
+    /* margin: 5px; */
+    margin-top: 16px;
+    padding: 5px;
+    border: 2px solid rgba(80, 48, 155, 0.568);
+    background-color: rgb(98, 60, 187);
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.4s all ease-in-out;
+    font-size: 14px;
+    /* width: 200px; */
+    text-align: center;
+}
+
+.vaccineslots button:hover{
+    background-color:rgb(80, 48, 155);
+}
+.vaccineslots button:active {
+    background-color:rgb(73, 43, 143);
+}
+
+ul li {
+    color: black;
+}
+.results {
+    margin: 0 auto;
+    /* border: 1px solid orange; */
+    text-align: center;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 20px;
+   max-height: fit-content;
+}
+
+.results .centernames {
+    list-style: none;
+    display: block;
+    margin-left: 0px;
+    padding-left: 0px;
+   
+}
+
+.results .centernames li{
+    margin: 0 auto;
+    /* border: 1px solid blue; */
+    min-width:220px ;
+    max-width:300px;
+    max-height: 100px;
+    background-color: #fff;
+    border-radius: 4px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    
+}
+
+.results .centernames li .result-element {
+    display: flex;
+    max-height:120px;
+}
+
+.results .centernames li .result-element .hospitalname {
+    margin: 0 auto;
+    width:100%;
+    padding: 15px;
+    border-radius: 4px 0px 0px 4px;
+    color: #fff;
+    display: block;
+    /* background-color: rgb(157, 60, 187); */
+    background-color: rgb(98, 60, 187);
+    
+}
+
+.results .centernames li .result-element .hospitalname h5{
+    font-size: 14px;
+    font-weight: 800;
+    margin-bottom: 5px;
+    /* border: 1px solid orange; */
+   
+}
+
+.results .centernames li .result-element .hospitalname .hospital-address {
+    font-size: 12px;
+    font-weight: 400;
+    /* border: 1px solid red; */
+}
+
+.results .centernames li .result-element .slotsavail{
+    /* border: 1px solid yellowgreen; */
+    padding: 10px;
+}
+
+.results .centernames li .result-element .slotsavail h5 {
+    font-size: 15px;
+    font-weight: 800;
+    color: #6c757d;
+    
+}
+
+
+.results .centernames li .result-element .slotsavail h6 {
+    font-weight: 600;
+    color: #6c757d;
+    
+}
+
+.maindiv .mainheading {
+ 
+    text-align: center;
+    margin-bottom: 10px;
+   
+}
+.maindiv .mainheading h1{
+    font-size: 35px;
+    font-weight: 900;
+    margin: 0 auto;
+    text-align: center;
+    color: rgb(98, 60, 187);
+    /* font-family: hez; */
+}   
+
+
+
+
+
+
+/* Media queries */
+@media only screen and (max-width: 800px){
+   
+
+    .fixedright {
+      position: sticky;
+      left: 0;
+  }
+
+  .heading{
+      /* border: 1px solid black; */
+      /* width:250px !important; */
+      /* text-align: center; */
+      margin-bottom: 10px;
+     
+  }
+  .heading h2{
+      font-size: 20px;
+      margin: 0 auto;
+      text-align: center !important;
+
+  }
+  .vaccineslots{
+    /* border: 2px solid green; */
+    width: 280px;
+    margin: 0 auto;
+    padding: 10px;
+}
+.vaccineslots input{
+    /* border: 1px solid blue; */
+    margin-left: 0px;
+    margin-bottom: 10px;
+  
+}
+.vaccineslots button{
+  margin: 0 auto;
+  margin-left: 0px;
+  margin-top: 12px;
+}
+
+
+
+
+
+ 
+}
+@media only screen and (max-width: 500px) {
+  footer {
+ 
+      height: 140px;
+      padding-top: 40px;
+      padding-bottom: 20px;
+    
+  }
+
+  footer .footer-element p{
+      text-align: center;
+      /* border: 1px solid green; */
+      margin: 0 auto;
+      height: 100%;
+      margin-bottom: 10px;
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--white-text-light);
+  }
+  
+  
+  footer .footer-element p a {
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+  }
+.title{
+  font-size: 22px;
+  margin-bottom: 20px;
+  margin-top: 20px;  
+}
+.maindiv .mainheading h1{
+    font-size: 32px;
+  
+}   
+  
+
+  /* //footer */
+  .icons-set2 i {
+      padding: 6px;
+      margin-left: 10px;
+      font-size: 18px;
+      cursor: pointer;
+      color: var(--sub-headline);
+      transition: 0.2s ease-out;
+      /* color: var(--buttons-Boston-before); */
+    }
+    .card-rectangle.size2{
+      width: 320px;
+    }
+
+  
+}
+
+
+@media only screen and (max-width: 412px)
+{
+  .vaccineslots{
+      /* border: 2px solid green; */
+      width: 280px;
+      margin: 0 auto;
+      padding: 10px;
+  }
+  .vaccineslots input{
+      /* border: 1px solid blue; */
+      margin-left: 0px;
+      margin-bottom: 10px;
+      width:100%;
+      /* padding: 8px; */
+      /* margin-bottom: 12px; */
+      /* font-size: 14px; */
+  }
+  .vaccineslots button{
+    margin: 0 auto;
+    margin-left: 0px;
+    margin-top: 12px;
+}
+.heading {
+    width: 280px;
+    margin-top: 0px;
+}
+.heading h2{
+  font-size: 16px;
+}
+}
+
+@media only screen and (max-width: 380px) {
+  footer {
+      padding-bottom: 20px;
+  }
+  .col-lg-12 {
+  padding: 5px;
+  }
+
+  .vaccineslots{
+     
+      width: 250px;
+      margin: 0 auto;
+      padding: 10px;
+  }
+  .vaccineslots input{
+      margin: 0 auto;
+      /* border: 1px solid blue; */
+      margin-left: 0px;
+      margin-bottom: 10px;
+      width:100%;
+      /* padding: 8px; */
+      /* margin-bottom: 12px; */
+      /* font-size: 14px; */
+  }
+  .vaccineslots button {
+      margin: 0 auto;
+      margin-left: 0px;
+      margin-top: 12px;
+  }
+  .heading {
+      width: 250px;
+      margin-top: 0px;
+  }
+  .heading h2{
+    font-size: 16px;
+  }
+
+  .maindiv {
+      width: 95%;
+  }
+  
+
+}
+

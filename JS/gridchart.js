@@ -18,7 +18,7 @@ async function getcovidapiInf(){
     // console.log(dataj);
     const dis = dataj['BR'].districts;
     const lengdist = Object.keys(dis).length;
-    console.log(dis);
+    // console.log(dis);
     var districts = ['Araria','Arwal', 'Aurangabad','Banka','Begusarai','Bhagalpur','Bhojpur','Buxar','Darbhanga',
     'East Champaran','Gaya','Gopalganj','Jamui','Jehanabad',
     'Kaimur','Katihar','Khagaria','Kishanganj','Lakhisarai',
@@ -129,3 +129,6 @@ function numDifferentiation (val) {
   }
 
 // .toLocaleString('en-IN')
+
+// /v2/appointment/sessions/public/findByPin
+// https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin
