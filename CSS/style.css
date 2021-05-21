@@ -677,7 +677,7 @@ ul li {
     margin-top: 10px;
     outline: none;
     color: #fff;
-    cursor: pointer;
+    cursor:not-allowed;
     border: 2px solid rgba(187, 60, 134, 0.452);
     background-color: rgb(187, 60, 134);
 }
