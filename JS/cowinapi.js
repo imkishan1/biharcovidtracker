@@ -17,6 +17,7 @@ function getstatus()
         {
         for(var i =0;i<size;i++)
         {
+         
             var card = `  <li class="centerdetails">
             <div class="result-element">
               <div class="hospitalname">
