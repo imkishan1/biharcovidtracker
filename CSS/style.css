@@ -562,7 +562,7 @@ ul li {
 }
 
 .results .centernames li .result-element .slotsavail{
-    /* border: 1px solid yellowgreen; */
+   
     padding: 10px;
 }
 
@@ -570,7 +570,8 @@ ul li {
     font-size: 15px;
     font-weight: 800;
     color: #6c757d;
-    
+    /* border: 1px solid yellowgreen; */
+    margin-top: 16px;
 }
 
 
@@ -627,6 +628,16 @@ ul li {
     font-weight: 400;
 }
 
+.vaccinename {
+    /* border: 1px solid red; */
+    margin-bottom: 0px;
+}
+.vaccinename p{
+    margin-top: 5px;
+    font-size: 11px;
+    margin-bottom: 0px;
+    font-weight: 700;
+}
 
 /* Media queries */
 @media only screen and (max-width: 800px){
@@ -769,7 +780,7 @@ ul li {
 
 }
 
-@media only screen and (max-width: 380px) {
+@media only screen and (max-width: 390px) {
   footer {
       padding-bottom: 20px;
   }
@@ -804,6 +815,7 @@ ul li {
   }
   .heading h2{
     font-size: 16px;
+    
   }
 
   .maindiv {
@@ -812,7 +824,10 @@ ul li {
   .circle {     
     transform: translate(125px,-110px);
 }
-  
+ 
+  .mainheading h1{
+      font-size:29px !important;
+  }
 
 }
 
