@@ -25,8 +25,7 @@ async function getcovidapiInf(){
     'Madhepura','Madhubani','Munger','Muzaffarpur',
     'Nalanda','Nawada','Patna','Purnia','Rohtas','Saharsa','Samastipur','Saran',
     'Sheikhpura','Sheohar','Sitamarhi','Siwan',
-    'Supaul','Vaishali','West Champaran'
-]
+    'Supaul','Vaishali','West Champaran']
 
 const active = [];
 
@@ -91,7 +90,6 @@ for(var i=0;i<size;i++)
 {
   if(dataforchart[i].statecode=='BR')
   {
-   console.log(dataforchart[i].confirmed);
    const totalconfirmed = document.getElementById('conf');
    totalconfirmed.innerText = `${dataforchart[i].confirmed.replace(/(\d)(?=(\d\d)+\d$)/g, "$1,")}`;
 

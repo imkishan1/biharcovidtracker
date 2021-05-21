@@ -9,9 +9,7 @@ function getstatus()
         const url ='https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByPin?pincode='+a+'&date='+b;
         const jsonurl = await fetch(url);
         const getdata = await jsonurl.json();
-        console.log(getdata);
         const size = Object.keys(getdata.centers).length;
-        console.log(size);
         const cardul = document.getElementById('ulid');
         var text = "Sorry, No Vaccination center is available for booking.";
         if(size!=0)
@@ -43,7 +41,7 @@ function getstatus()
       else{
         var card = `<div class="notfound"><p class="notfoundtxt">${text}</p></div>`
         cardul.innerHTML+=card;
-        console.log("Else");
+       
       }
     
         
@@ -53,11 +51,10 @@ function getstatus()
 
 function downloadfile(){
   var refid = document.querySelector('#refid').value;
-  console.log("Triggred");
   async function downloadodf(a)
   {
     const url = 'https://cdn-api.co-vin.in/api/v2/registration/certificate/public/download?beneficiary_reference_id='+a;
-    console.log(url);
+    // console.log(url);
     // const datajs = await fetch(url);
     // const datajson = await datajs.json();
   }
