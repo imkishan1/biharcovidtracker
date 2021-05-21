@@ -50,6 +50,9 @@ function getstatus()
     getcowinapidata(pincode,date);
 }
 
+function downloadfile(){
+  console.log("Triggred");
+}
 
 
 function SetMinDate() {
