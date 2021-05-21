@@ -1,5 +1,6 @@
 function getstatus()
 {   
+
     var date = document.querySelector('#date').value;
     var pincode = document.querySelector("#pin").value;
        async function getcowinapidata(a,b){
@@ -51,7 +52,17 @@ function getstatus()
 }
 
 function downloadfile(){
+  var refid = document.querySelector('#refid').value;
   console.log("Triggred");
+  async function downloadodf(a)
+  {
+    const url = 'https://cdn-api.co-vin.in/api/v2/registration/certificate/public/download?beneficiary_reference_id='+a;
+    console.log(url);
+    // const datajs = await fetch(url);
+    // const datajson = await datajs.json();
+  }
+ downloadodf(refid);
+
 }
 
 

@@ -28,15 +28,16 @@ async function getcovidapiInf(){
     'Supaul','Vaishali','West Champaran'
 ]
 
+const active = [];
 
 const bihar = document.getElementById('bihar');
 for(var i=0;i<lengdist;i++)
 {
-  var conf = dis[districts[i]].total.confirmed;
-  var rec = dis[districts[i]].total.recovered+dis[districts[i]].delta.recovered;
-  var active = conf-rec;
-if(dis[districts[i]].delta.confirmed != null)
+if( dis[districts[i]].delta != null)
 {
+  var conf = dis[districts[i]].total.confirmed+dis[districts[i]].delta.confirmed;
+  var rec = dis[districts[i]].total.recovered+dis[districts[i]].delta.recovered;
+  active.push(conf-rec);
     if(dis[districts[i]].delta.deceased == null)
     {
      
@@ -68,11 +69,14 @@ if(dis[districts[i]].delta.confirmed != null)
     bihar.innerHTML += template;
 }
 else {
+  var conf = dis[districts[i]].total.confirmed;
+  var rec = dis[districts[i]].total.recovered;
+  active.push(conf-rec);
   var template = `<tr class="tablerow">
                 
   <td class="fixedright color">${districts[i]}</td>
   <td class="dataletterspacing">${dis[districts[i]].total.confirmed.toLocaleString('en-IN')}</td>
-  <td class="dataletterspacing">${active.toLocaleString('en-IN')}</td>
+  <td class="dataletterspacing">${active[i].toLocaleString('en-IN')}</td>
   <td class="dataletterspacing">${dis[districts[i]].total.recovered.toLocaleString('en-IN')}</td>
   <td class="dataletterspacing">${dis[districts[i]].total.deceased.toLocaleString('en-IN')}</td>
   <td class="dataletterspacing">${numDifferentiation(dis[districts[i]].total.vaccinated)}</td>

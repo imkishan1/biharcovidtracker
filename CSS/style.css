@@ -681,6 +681,15 @@ ul li {
     border: 2px solid rgba(187, 60, 134, 0.452);
     background-color: rgb(187, 60, 134);
 }
+
+.download p {
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 0px;
+
+}
 /* Media queries */
 @media only screen and (max-width: 800px){
    
@@ -819,6 +828,10 @@ ul li {
     .circle {     
         transform: translate(130px,-110px);
     }
+    .download {
+        width: 280px;
+
+    }
 
 }
 
@@ -869,6 +882,9 @@ ul li {
  
   .mainheading h1{
       font-size:29px !important;
+  }
+  .download {
+      width: 250px;
   }
 
 }
