@@ -27,7 +27,7 @@ async function getcovidapiInf(){
     'Sheikhpura','Sheohar','Sitamarhi','Siwan',
     'Supaul','Vaishali','West Champaran']
 
-const active = [];
+var active;
 
 const bihar = document.getElementById('bihar');
 for(var i=0;i<lengdist;i++)
@@ -36,7 +36,7 @@ if( dis[districts[i]].delta != null)
 {
   var conf = dis[districts[i]].total.confirmed+dis[districts[i]].delta.confirmed;
   var rec = dis[districts[i]].total.recovered+dis[districts[i]].delta.recovered;
-  active.push(conf-rec);
+  active=(conf-rec);
     if(dis[districts[i]].delta.deceased == null)
     {
      
@@ -70,7 +70,7 @@ if( dis[districts[i]].delta != null)
 else {
   var conf = dis[districts[i]].total.confirmed;
   var rec = dis[districts[i]].total.recovered;
-  active.push(conf-rec);
+  active=(conf-rec);
   var template = `<tr class="tablerow">
                 
   <td class="fixedright color">${districts[i]}</td>
