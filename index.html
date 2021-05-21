@@ -146,8 +146,11 @@
           <div class="col-lg-12">
             <div class="vaccineslots">
               <form action="">
-               <input type="text" placeholder="Enter Pincode" id="pin" class="pininput" name="pincode" required>
-                <br>
+               <input type="text" placeholder="Enter Pincode" id="pin"class="form-control" name="pincode" required>
+               <div class="invalid-feedback">
+                Please provide a valid zip.
+              </div>
+              
                 <input type="date" name="date" id="date"/>
                 <br>
                 <button class="but" type="button" onclick="getstatus()">Check Availability</button>

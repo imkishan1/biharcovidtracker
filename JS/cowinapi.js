@@ -78,7 +78,23 @@ SetMinDate();
 var date = document.getElementById('date').value;
 var pincode = document.getElementById("pin").value;
 
+document.getElementById('pin').addEventListener('blur',validateZip)
+
+function validateZip(){
+  const zip = document.getElementById('pin');
+  const re =/^[0-9]{6}(-[0-9])?$/
+
+  if(!re.test(zip.value)){
+      pin.classList.add('is-invalid')
+      pin.classList.remove('is-valid')
+  }
+  else{
+      pin.classList.add('is-valid')
+      pin.classList.remove('is-invalid')
+  }
+}
 
 {/* <div class="vaccinename">
 <p>${getdata.centers[i].sessions[0].vaccine}</p>
 </div> */}
+
