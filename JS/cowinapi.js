@@ -3,11 +3,13 @@ function getstatus()
     var date = document.querySelector('#date').value;
     var pincode = document.querySelector("#pin").value;
        async function getcowinapidata(a,b){
-        const url ='https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode='+a+'&date='+b;
+        // const url ='https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode='+a+'&date='+b;
+        // https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByPin?pincode=110001&date=31-03-2021
+        const url ='https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByPin?pincode='+a+'&date='+b;
         const jsonurl = await fetch(url);
         const getdata = await jsonurl.json();
         console.log(getdata);
-        const size = Object.keys(getdata.sessions).length;
+        const size = Object.keys(getdata.centers).length;
         console.log(size);
         const cardul = document.getElementById('ulid');
         var text = "Sorry, No Vaccination center is available for booking.";
@@ -18,19 +20,19 @@ function getstatus()
             var card = `  <li class="centerdetails">
             <div class="result-element">
               <div class="hospitalname">
-                <h5 id="name">${getdata.sessions[i].name}</h5>
+                <h5 id="name">${getdata.centers[i].name}</h5>
                 <div id="add" class="hospital-address">
-                  ${getdata.sessions[i].address}
+                  ${getdata.centers[i].address}
                 </div>
               </div>
               <div class="slotsavail">
                 <h5>Slots Available</h5>
-                <h6 id="slots">${getdata.sessions[i].available_capacity}</h6>
+                <h6 id="slots">${getdata.centers[i].sessions[0].available_capacity}</h6>
               </div>
             </div>
           </li>
           <div class="circle">
-          <h6>${getdata.sessions[i].min_age_limit+'+'}</h6>
+          <h6>${getdata.centers[i].sessions[0].min_age_limit+'+'}</h6>
         </div>`
           cardul.innerHTML +=card;
 
