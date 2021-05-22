@@ -523,13 +523,11 @@ ul li {
   font-size: 14px;
   font-weight: 800;
   margin-bottom: 5px;
-  /* border: 1px solid orange; */
 }
 
 .results .centernames li .result-element .hospitalname .hospital-address {
   font-size: 12px;
   font-weight: 400;
-  /* border: 1px solid red; */
 }
 .results .centernames li .result-element .hospitalname .hospital-address p {
   margin-bottom: 0px;
@@ -542,7 +540,6 @@ ul li {
   align-items: center;
   justify-content: center;
   padding: 10px;
-  /* width: 30%; */
   /* border: 2px solid green; */
 }
 
@@ -551,14 +548,12 @@ ul li {
   font-weight: 800;
   color: #6c757d;
   margin-bottom: 5px;
-  /* border: 1px solid yellowgreen; */
   margin-top: 5px;
 }
 
 .results .centernames li .result-element .slotsavail h6 {
   font-weight: 600;
   color: #6c757d;
-  /* border: 1px solid yellowgreen; */
   margin-bottom: 0px;
 }
 

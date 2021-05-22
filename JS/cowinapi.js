@@ -55,22 +55,22 @@ function getstatus() {
     }
   }
 
+  
+   if(pincode==false)
+   {
+     click=0;
+   }
+   else {
+     var btn = document.getElementById('btn');
+     btn.innerText = 'Refresh Page';
+     click+=1;
+     if(click>1)
+     {
+       window.location.reload();
+     }
+   }
   getcowinapidata(pincode, date);
  
- 
-  if(pincode==false)
-  {
-    click=0;
-  }
-  else {
-    var btn = document.getElementById('btn');
-    btn.innerText = 'Refresh Page';
-    click+=1;
-    if(click>1)
-    {
-      window.location.reload();
-    }
-  }
 
 }
 
