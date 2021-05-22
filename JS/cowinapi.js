@@ -2,7 +2,6 @@ function getstatus()
 {   
 
     var date = document.querySelector('#date').value;
-    console.log(date)
     var pincode = document.querySelector("#pin").value;
        async function getcowinapidata(a,b){
         // const url ='https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode='+a+'&date='+b;
