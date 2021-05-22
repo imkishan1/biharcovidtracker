@@ -570,6 +570,9 @@ ul li {
     margin-bottom: 0px;
     font-weight: 600;
 }
+#feetype {
+    font-weight: 400 !important;
+}
 .results .centernames li .result-element .slotsavail{
    align-items: center;
    justify-content: center;

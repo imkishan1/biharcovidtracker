@@ -18,6 +18,7 @@ function getstatus() {
     const getdata = await jsonurl.json();
     const size = Object.keys(getdata.centers).length;
     const cardul = document.getElementById("ulid");
+    console.log(getdata);
     
     var text = "Sorry, No Vaccination center is available for booking.";
     if (size != 0) {
@@ -29,6 +30,7 @@ function getstatus() {
                 <div id="add" class="hospital-address">
                   ${getdata.centers[i].address}
                   <p>${getdata.centers[i].sessions[0].vaccine}</p> 
+                  <p id="feetype">${getdata.centers[i].fee_type}</p> 
                 </div>
               </div>
               <div class="slotsavail">
@@ -48,15 +50,15 @@ function getstatus() {
     } else {
       var card = `<div class="notfound"><p class="notfoundtxt">${text}</p></div>`;
       cardul.innerHTML += card;
-     
     }
   }
 
   getcowinapidata(pincode, date);
+ 
+  var btn = document.getElementById('btn');
   click+=1;
-  if(click==1)
+  if(pincode!=null)
   {
-    var btn = document.getElementById('btn');
     btn.innerText = 'Refresh Page';
   }
   if(click>1)
