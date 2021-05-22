@@ -34,6 +34,7 @@ for(var i=0;i<lengdist;i++)
 {
 if( dis[districts[i]].delta != null)
 {
+  
   var conf = dis[districts[i]].total.confirmed+dis[districts[i]].delta.confirmed;
   var rec = dis[districts[i]].total.recovered+dis[districts[i]].delta.recovered;
   active=(conf-rec);
@@ -58,7 +59,7 @@ if( dis[districts[i]].delta != null)
     var template = `<tr class="tablerow">
                      <td class="fixedright color">${districts[i]}</td>
                      <td class="dataletterspacing" > <span class="delta-confirmed"><i class="fas fa-arrow-up"></i>${dis[districts[i]].delta.confirmed.toLocaleString('en-IN')}</span><br>${dis[districts[i]].total.confirmed.toLocaleString('en-IN')}</td>
-                     <td class="dataletterspacing"> ${active.toLocaleString('en-IN')}</td>
+                     <td class="dataletterspacing"> ${active}</td>
                      <td class="dataletterspacing"> <span class="delta-confirmed recovered"><i class="fas fa-arrow-up"></i>${dis[districts[i]].delta.recovered.toLocaleString('en-IN')}</span><br>${dis[districts[i]].total.recovered.toLocaleString('en-IN')}</td>
                      <td class="dataletterspacing"> <span class="delta-confirmed deaths"><i class="fas fa-arrow-up"></i>${dis[districts[i]].delta.deceased.toLocaleString('en-IN')}</span><br>${dis[districts[i]].total.deceased.toLocaleString('en-IN')}</td>
                      <td class="dataletterspacing"> <span class="delta-confirmed vaccinated"><i class="fas fa-arrow-up"></i>${numDifferentiation(dis[districts[i]].delta.vaccinated)}</span><br>${numDifferentiation(dis[districts[i]].total.vaccinated)}</td>
@@ -68,6 +69,7 @@ if( dis[districts[i]].delta != null)
     bihar.innerHTML += template;
 }
 else {
+ 
   var conf = dis[districts[i]].total.confirmed;
   var rec = dis[districts[i]].total.recovered;
   active=(conf-rec);
@@ -75,7 +77,7 @@ else {
                 
   <td class="fixedright color">${districts[i]}</td>
   <td class="dataletterspacing">${dis[districts[i]].total.confirmed.toLocaleString('en-IN')}</td>
-  <td class="dataletterspacing">${active[i].toLocaleString('en-IN')}</td>
+  <td class="dataletterspacing">${active.toLocaleString('en-IN')}</td>
   <td class="dataletterspacing">${dis[districts[i]].total.recovered.toLocaleString('en-IN')}</td>
   <td class="dataletterspacing">${dis[districts[i]].total.deceased.toLocaleString('en-IN')}</td>
   <td class="dataletterspacing">${numDifferentiation(dis[districts[i]].total.vaccinated)}</td>
