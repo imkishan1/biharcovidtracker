@@ -2,6 +2,7 @@ function getstatus()
 {   
 
     var date = document.querySelector('#date').value;
+    console.log(date)
     var pincode = document.querySelector("#pin").value;
        async function getcowinapidata(a,b){
         // const url ='https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode='+a+'&date='+b;
@@ -10,6 +11,7 @@ function getstatus()
         const jsonurl = await fetch(url);
         const getdata = await jsonurl.json();
         console.log(getdata);
+        console.log(url);
         const size = Object.keys(getdata.centers).length;
         const cardul = document.getElementById('ulid');
         var text = "Sorry, No Vaccination center is available for booking.";
@@ -70,7 +72,8 @@ function SetMinDate() {
     day = day;
     day = day.toString();
     var month = ("0" + (now.getMonth() + 1)).slice(-2);
-    var today = now.getFullYear() + "-" + (month) + "-" + (day);
+    var year = now.getFullYear();
+    var today = (day) + "-" + (month) + "-" + (year);
     $('#date').val(today);
     $('#date').attr('min', today);
 }
@@ -95,7 +98,5 @@ function validateZip(){
   }
 }
 
-{/* <div class="vaccinename">
-<p>${getdata.centers[i].sessions[0].vaccine}</p>
-</div> */}
+
 
