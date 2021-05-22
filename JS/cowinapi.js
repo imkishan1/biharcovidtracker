@@ -1,7 +1,12 @@
+var click=0;
 function getstatus() {
+ 
   var date = document.querySelector("#date").value;
   var pincode = document.querySelector("#pin").value;
+  
+  
   async function getcowinapidata(a, b) {
+    
     // const url ='https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode='+a+'&date='+b;
     // https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByPin?pincode=110001&date=31-03-2021
     const url =
@@ -38,15 +43,26 @@ function getstatus() {
             </div>
           </li>
         `;
-        cardul.innerHTML += card;
-        
+        cardul.innerHTML += card;       
       }
     } else {
       var card = `<div class="notfound"><p class="notfoundtxt">${text}</p></div>`;
       cardul.innerHTML += card;
+     
     }
   }
+
   getcowinapidata(pincode, date);
+  click+=1;
+  if(click==1)
+  {
+    var btn = document.getElementById('btn');
+    btn.innerText = 'Refresh Page';
+  }
+  if(click>1)
+  {
+    window.location.reload();
+  }
 }
 
 function downloadfile() {
