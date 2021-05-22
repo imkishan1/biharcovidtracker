@@ -47,7 +47,7 @@ body {
 
   font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
-  
+
   overflow: overlay;
 }
 
@@ -91,6 +91,10 @@ span {
   height: fit-content;
   padding-bottom: 50px;
   position: relative;
+}
+
+.bg {
+    
 }
 /* //Background */
 
