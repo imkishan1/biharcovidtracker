@@ -3,6 +3,7 @@ function getstatus() {
  
   var date = document.querySelector("#date").value;
   var pincode = document.querySelector("#pin").value;
+  console.log(pincode);
   
   
   async function getcowinapidata(a, b) {
@@ -56,16 +57,21 @@ function getstatus() {
 
   getcowinapidata(pincode, date);
  
-  var btn = document.getElementById('btn');
-  click+=1;
-  if(pincode!=null)
+ 
+  if(pincode==false)
   {
+    click=0;
+  }
+  else {
+    var btn = document.getElementById('btn');
     btn.innerText = 'Refresh Page';
+    click+=1;
+    if(click>1)
+    {
+      window.location.reload();
+    }
   }
-  if(click>1)
-  {
-    window.location.reload();
-  }
+
 }
 
 function downloadfile() {
