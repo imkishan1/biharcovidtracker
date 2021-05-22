@@ -47,6 +47,7 @@ body {
 
   font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
+  
   overflow: overlay;
 }
 
@@ -515,6 +516,7 @@ ul li {
   border-radius: 4px 0px 0px 4px;
   color: #fff;
   display: block;
+  /* box-sizing: border-box; */
   /* background-color: rgb(157, 60, 187); */
   background-color: rgb(98, 60, 187);
 }
