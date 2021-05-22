@@ -30,7 +30,8 @@ function getstatus() {
                 <div id="add" class="hospital-address">
                   ${getdata.centers[i].address}
                   <p>${getdata.centers[i].sessions[0].vaccine}</p> 
-                  <p id="feetype">${getdata.centers[i].fee_type}</p> 
+                  <div class="free"><h6>${getdata.centers[i].fee_type}</h6> 
+                  </div>
                 </div>
               </div>
               <div class="slotsavail">

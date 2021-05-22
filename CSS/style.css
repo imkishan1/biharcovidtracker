@@ -9,6 +9,7 @@
 --recovered:#72C217;
 --background-dark-blue:#1e1e30;
 --background-dark-blue2:#232333;
+--vaccine: rgb(216, 48, 102);
 /* --background-dark-blue3:#159c42; */
 /* --recovered:#28A745;; */
 --active:#007bff;
@@ -629,6 +630,27 @@ ul li {
     margin: 0 auto;
     font-size: 10px;
     font-weight: 600;
+}
+.free {
+    background-color: rgba(255, 255, 255, 0.342);
+   /* position: relative; */
+    padding: 1px;
+    width:50%;
+    border-radius:30px;
+    height: 16px;
+    color: #fff;
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    /* border-radius: 50%; */
+    /* transform: translate(145px,-115px); */
+}
+.free h6 {
+    color: #fff !important;
+    margin: 0 auto;
+    font-size: 10px;
+    font-weight: 500;
+    margin-bottom: 0px;
 }
 .notfound {
     background-color: rgba(98, 60, 187, 0.521);
