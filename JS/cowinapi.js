@@ -78,8 +78,7 @@ function downloadfile() {
   var refid = document.querySelector("#refid").value;
   async function downloadodf(a) {
     const url =
-      "https://cdn-api.co-vin.in/api/v2/registration/certificate/public/download?beneficiary_reference_id=" +
-      a;
+      "https://cdn-api.co-vin.in/api/v2/registration/certificate/public/download?beneficiary_reference_id="+a;
     // console.log(url);
     // const datajs = await fetch(url);
     // const datajson = await datajs.json();
