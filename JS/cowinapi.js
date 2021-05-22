@@ -10,8 +10,6 @@ function getstatus()
         const url ='https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByPin?pincode='+a+'&date='+b;
         const jsonurl = await fetch(url);
         const getdata = await jsonurl.json();
-        console.log(getdata);
-        console.log(url);
         const size = Object.keys(getdata.centers).length;
         const cardul = document.getElementById('ulid');
         var text = "Sorry, No Vaccination center is available for booking.";
