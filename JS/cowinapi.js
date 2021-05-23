@@ -88,7 +88,9 @@ function downloadfile() {
 
 function SetMinDate() {
   var now = new Date();
+  // console.log(now);
   var day = parseInt(("0" + now.getDate()).slice(-2));
+  // console.log(day);
   day = day+1;
   day = day.toString();
   var month = ("0" + (now.getMonth() + 1)).slice(-2);

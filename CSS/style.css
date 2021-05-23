@@ -498,7 +498,7 @@ ul li {
   max-width: 300px;
   /* max-height: 120px; */
   max-height: fit-content;
-  background-color: #fff;
+  /* background-color: #fff; */
   border-radius: 3px;
   font-size: 18px;
   margin-bottom: 10px;
@@ -508,6 +508,9 @@ ul li {
   display: flex;
   max-height: fit-content;
   align-items: center;
+  background-color: #fff;
+  /* border-radius: 3px; */
+  border-radius: 4px;
   /* background-color: #fff; */
   /* border-radius: 4px; */
 }
@@ -546,6 +549,7 @@ ul li {
   align-items: center;
   justify-content: center;
   padding: 10px;
+  
   /* border: 2px solid green; */
 }
 
@@ -585,7 +589,7 @@ ul li {
   height: 20px;
   color: #fff;
   margin: 0 auto;
-  /* border-radius: 50%; */
+
   /* transform: translate(145px,-115px); */
 }
 .slotsavail .circle h6 {
@@ -595,7 +599,7 @@ ul li {
   font-weight: 600;
 }
 .free {
-  background-color: rgba(255, 255, 255, 0.342);
+  background-color: rgba(255, 255, 255, 0.616);
   /* position: relative; */
   padding: 1px;
   width: 50%;
@@ -615,6 +619,33 @@ ul li {
   font-weight: 500;
   margin-bottom: 0px;
 }
+/* .doses {
+  float: right;
+  margin: 0 auto;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding-left: 25px;
+  padding-right: 25px;
+  border-radius: 0px 0px 3px 3px;
+  background-color: rgba(122, 91, 173, 0.74);
+} */
+/* .doses .dose1{
+  border: 1px solid green;
+  display: block;
+  margin: 5px;
+  
+}
+.doses .dose1 h6 {
+  color: rgb(98, 60, 187);
+  color: #fff;
+  margin-bottom: 0px;
+  font-size: 14px;
+  font-weight: 500;
+} */
 .notfound {
   background-color: rgba(98, 60, 187, 0.521);
   width: fit-content;
@@ -721,6 +752,7 @@ ul li {
   }
   .maindiv {
     padding: 10px;
+    width: 98%;
   }
 }
 @media only screen and (max-width: 500px) {
@@ -849,7 +881,7 @@ ul li {
   }
 
   .maindiv {
-    width: 95%;
+    width: 100%;
   }
   .circle {
     /* transform: translate(125px,-110px); */
