@@ -37,7 +37,8 @@ if( dis[districts[i]].delta != null)
   
   var conf = dis[districts[i]].total.confirmed+dis[districts[i]].delta.confirmed;
   var rec = dis[districts[i]].total.recovered+dis[districts[i]].delta.recovered;
-  active=(conf-rec);
+  var deathsdistric =  dis[districts[i]].total.deceased+dis[districts[i]].delta.deceased;
+  active=(conf-(rec+deceased));
     if(dis[districts[i]].delta.deceased == null)
     {
      
@@ -72,7 +73,9 @@ else {
  
   var conf = dis[districts[i]].total.confirmed;
   var rec = dis[districts[i]].total.recovered;
-  active=(conf-rec);
+  var deathsdistric = dis[districts[i]].total.deceased;
+  active=((conf)-(rec+ deathsdistric));
+  // console.log(active);
   var template = `<tr class="tablerow">
                 
   <td class="fixedright color">${districts[i]}</td>
