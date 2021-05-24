@@ -39,6 +39,10 @@ if( dis[districts[i]].delta != null)
   var rec = dis[districts[i]].total.recovered;
   var deathsdistric =  dis[districts[i]].total.deceased;
   active=(conf-(rec+deathsdistric));
+  if(isNaN(active)==true)
+  {
+    active='-';
+  }
   console.log(active)
     if(dis[districts[i]].delta.deceased == null)
     {
