@@ -6,7 +6,7 @@ async function getcovidapiInf(){
     const jsdata2 = await jsondata2.json();
     const dataforchart = jsdata2.statewise;
     const size = Object.keys(dataforchart).length;
-
+  
 
     // if(dataforchart[])
     // dataforchart[15];
@@ -15,7 +15,7 @@ async function getcovidapiInf(){
     const dataj = await jsondata3.json();
     dataforchart.splice(31, 1);
 
-    // console.log(dataj);
+    console.log(dataj);
     const dis = dataj['BR'].districts;
     const lengdist = Object.keys(dis).length;
     // console.log(dis);
@@ -35,26 +35,27 @@ for(var i=0;i<lengdist;i++)
 if( dis[districts[i]].delta != null)
 {
   
-  var conf = dis[districts[i]].total.confirmed+dis[districts[i]].delta.confirmed;
-  var rec = dis[districts[i]].total.recovered+dis[districts[i]].delta.recovered;
-  var deathsdistric =  dis[districts[i]].total.deceased+dis[districts[i]].delta.deceased;
+  var conf = dis[districts[i]].total.confirmed;
+  var rec = dis[districts[i]].total.recovered;
+  var deathsdistric =  dis[districts[i]].total.deceased;
   active=(conf-(rec+deathsdistric));
+  console.log(active)
     if(dis[districts[i]].delta.deceased == null)
     {
      
-        dis[districts[i]].delta.deceased="0";
+        dis[districts[i]].delta.deceased=0;
     }
   
     if(dis[districts[i]].delta.tested == null)
     {
      
-        dis[districts[i]].delta.tested="0";
+        dis[districts[i]].delta.tested=0;
     }
   
     if(dis[districts[i]].delta.vaccinated == null)
     {
      
-        dis[districts[i]].delta.vaccinated="0";
+        dis[districts[i]].delta.vaccinated=0;
     }
   
     var template = `<tr class="tablerow">
