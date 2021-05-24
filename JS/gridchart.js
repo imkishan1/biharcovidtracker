@@ -38,7 +38,7 @@ if( dis[districts[i]].delta != null)
   var conf = dis[districts[i]].total.confirmed+dis[districts[i]].delta.confirmed;
   var rec = dis[districts[i]].total.recovered+dis[districts[i]].delta.recovered;
   var deathsdistric =  dis[districts[i]].total.deceased+dis[districts[i]].delta.deceased;
-  active=(conf-(rec+deceased));
+  active=(conf-(rec+deathsdistric));
     if(dis[districts[i]].delta.deceased == null)
     {
      
