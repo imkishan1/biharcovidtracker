@@ -43,7 +43,7 @@ if( dis[districts[i]].delta != null)
   {
     active='-';
   }
-  console.log(active)
+
     if(dis[districts[i]].delta.deceased == null)
     {
      
