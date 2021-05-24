@@ -19,7 +19,7 @@ async function getcovidapiInf(){
     const dis = dataj['BR'].districts;
     const lengdist = Object.keys(dis).length;
     // console.log(dis);
-    var districts = ['Patna','Araria','Arwal', 'Aurangabad','Banka','Begusarai','Bhagalpur','Buxar','Darbhanga',
+    var districts = ['Patna','Araria','Arwal', 'Aurangabad','Banka','Begusarai','Bhagalpur','Bhojpur','Buxar','Darbhanga',
     'East Champaran','Gaya','Gopalganj','Jamui','Jehanabad',
     'Kaimur','Katihar','Khagaria','Kishanganj','Lakhisarai',
     'Madhepura','Madhubani','Munger','Muzaffarpur',
