@@ -15,7 +15,7 @@ async function getcovidapiInf(){
     const dataj = await jsondata3.json();
     dataforchart.splice(31, 1);
 
-    console.log(dataj);
+    // console.log(dataj);
     const dis = dataj['BR'].districts;
     const lengdist = Object.keys(dis).length;
     // console.log(dis);
