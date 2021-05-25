@@ -69,7 +69,7 @@ if( dis[districts[i]].delta != null)
                      <td class="dataletterspacing"> <span class="delta-confirmed recovered"><i class="fas fa-arrow-up"></i>${dis[districts[i]].delta.recovered.toLocaleString('en-IN')}</span><br>${dis[districts[i]].total.recovered.toLocaleString('en-IN')}</td>
                      <td class="dataletterspacing"> <span class="delta-confirmed deaths"><i class="fas fa-arrow-up"></i>${dis[districts[i]].delta.deceased.toLocaleString('en-IN')}</span><br>${dis[districts[i]].total.deceased.toLocaleString('en-IN')}</td>
                      <td class="dataletterspacing"> <span class="delta-confirmed vaccinated"><i class="fas fa-arrow-up"></i>${numDifferentiation(dis[districts[i]].delta.vaccinated)}</span><br>${numDifferentiation(dis[districts[i]].total.vaccinated)}</td>
-                     <td class="dataletterspacing"> <span class="delta-confirmed tests"><i class="fas fa-arrow-up"></i>${numDifferentiation(dis[districts[i]].delta.tested)}</span><br>${numDifferentiation(dis[districts[i]].total.tested)}</td>
+                     <td class="dataletterspacing">${numDifferentiation(dis[districts[i]].total.tested)}</td>
                      <td class="dataletterspacing"> ${numDifferentiation(dis[districts[i]].meta.population)}</td>
     </tr>`
     bihar.innerHTML += template;
