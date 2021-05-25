@@ -93,9 +93,7 @@ span {
   position: relative;
 }
 
-.bg {
-    
-}
+
 /* //Background */
 
 /* footer */
@@ -116,6 +114,7 @@ footer .footer-element p {
   /* border: 1px solid green; */
   margin: 0 auto;
   height: 100%;
+  float: left;
   font-size: 15px;
   font-weight: 300;
   color: var(--white-text-light);
@@ -127,7 +126,9 @@ footer .footer-element p a {
   cursor: pointer;
 }
 /* //footer */
-
+.icons-set2 {
+  float: right;
+}
 .icons-set2 i {
   padding: 6px;
   margin-left: 10px;
@@ -177,9 +178,7 @@ footer .footer-element p a {
   /* height:160px; */
   /* border: 1px solid blue; */
 }
-.sqrcards .elements .cardheading {
-  /* border: 1px solid red; */
-}
+
 .sqrcards .elements .cardheading h4 {
   color: #7e8083ce;
   font-weight: 800;
@@ -717,6 +716,18 @@ ul li {
   margin-bottom: 0px;
 }
 /* Media queries */
+
+@media only screen and (max-width: 1100px) {
+  footer .footer-element p {
+   
+    float: none;
+  }
+  .icons-set2 {
+    float: none;
+  }
+}
+
+
 @media only screen and (max-width: 800px) {
   .fixedright {
     position: sticky;
@@ -754,6 +765,13 @@ ul li {
     padding: 10px;
     width: 98%;
   }
+  footer .footer-element p {
+   
+    float: none;
+  }
+  .icons-set2 {
+    float: none;
+  }
 }
 @media only screen and (max-width: 500px) {
   footer {
@@ -764,6 +782,7 @@ ul li {
 
   footer .footer-element p {
     text-align: center;
+    float: none;
     /* border: 1px solid green; */
     margin: 0 auto;
     height: 100%;
@@ -786,7 +805,9 @@ ul li {
   .maindiv .mainheading h1 {
     font-size: 32px;
   }
-
+  .icons-set2 {
+    float: none;
+  }
   /* //footer */
   .icons-set2 i {
     padding: 6px;
@@ -801,9 +822,7 @@ ul li {
     width: 320px;
   }
 
-  .circle {
-    /* transform: translate(148px,-110px); */
-  }
+
 }
 
 @media only screen and (max-width: 412px) {
@@ -836,9 +855,7 @@ ul li {
   .heading h2 {
     font-size: 16px;
   }
-  .circle {
-    /* transform: translate(130px,-110px); */
-  }
+
   .download {
     width: 280px;
   }
@@ -883,10 +900,6 @@ ul li {
   .maindiv {
     width: 100%;
   }
-  .circle {
-    /* transform: translate(125px,-110px); */
-  }
-
   .mainheading h1 {
     font-size: 29px !important;
   }
