@@ -288,6 +288,7 @@ tr:hover td {
   background-color: rgb(245, 243, 243) !important;
 }
 .tablerow td {
+  /* vertical-align: text-bottom; */
   /* background-color: var(--background-dark-blue2); */
   padding: 10px;
   background-color: rgb(252, 252, 252);
@@ -298,7 +299,7 @@ tr:hover td {
   font-weight: 600;
   cursor: pointer;
   color: #6c757d;
-  border-radius: 3px;
+  border-radius: 3px; 
 }
 .dataletterspacing {
   letter-spacing: 1.3px;
