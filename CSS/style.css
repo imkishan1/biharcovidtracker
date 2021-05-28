@@ -16,6 +16,7 @@
   --newcases: #d63152;
   --totalcases: #883ed5;
   /* --deceased:#ff073a; */
+  --dark-mode-bg:rgb(31, 27, 37);
   --deceased: rgba(108, 117, 125, 1);
 }
 
@@ -42,6 +43,7 @@ body {
   color: #6c757d;
 
   background-color: rgba(255, 255, 255, 0.856);
+  /* background-color:var(--dark-mode-bg); */
   /* background-color: rgb(17, 17, 17); */
   /* background-color: #161625; */
 
