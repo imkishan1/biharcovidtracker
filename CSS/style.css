@@ -399,6 +399,7 @@ tr:hover td {
   margin-bottom: 40px;
   padding: 30px;
   width: 89%;
+  animation: .5s forwards;
   border-radius: 4px;
   /* background-color: rgba(80, 48, 155, 0.192); */
   /* background-color: rgba(155, 48, 123, 0.192); */
