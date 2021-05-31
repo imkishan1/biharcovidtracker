@@ -90,10 +90,29 @@ function SetMinDate() {
   var now = new Date();
   // console.log(now);
   var day = parseInt(("0" + now.getDate()).slice(-2));
+  var month = parseInt(("0" + (now.getMonth() + 1)).slice(-2));
   // console.log(day);
-  day = day+1;
+  // if(day==31){
+  //   day="01";
+  // }
+  // else{
+  //   day = day+1;
+  // }
+  if(day==30 && ( month==2 || month==4 || month==6 ||month==9 || month==11))
+  {
+    day="01";
+    month+=1;
+  }
+  else if(day==31){
+    day="01";
+    month+=1;
+  }
+  else{
+    day = day+1;
+  }
+  month = month.toString();
   day = day.toString();
-  var month = ("0" + (now.getMonth() + 1)).slice(-2);
+  // var month = ("0" + (now.getMonth() + 1)).slice(-2);
   var year = now.getFullYear();
   var today = day + "-" + month + "-" + year;
   $("#date").val(today);
