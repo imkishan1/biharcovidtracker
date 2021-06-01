@@ -55,6 +55,11 @@ if( dis[districts[i]].delta != null)
      
         dis[districts[i]].delta.tested=0;
     }
+    if(dis[districts[i]].delta.recovered == null)
+    {
+     
+        dis[districts[i]].delta.recovered=0;
+    }
   
     if(dis[districts[i]].delta.vaccinated == null)
     {
