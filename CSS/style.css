@@ -777,6 +777,8 @@ ul li {
   }
   .maindiv {
     padding: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     width: 98%;
   }
   footer .footer-element p {
