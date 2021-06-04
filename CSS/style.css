@@ -837,7 +837,9 @@ ul li {
   .card-rectangle.size2 {
     width: 320px;
   }
-
+  .maindiv {
+    width: 100%;
+  }
 
 }
 
@@ -882,7 +884,7 @@ ul li {
     padding-bottom: 20px;
   }
   .col-lg-12 {
-    padding: 5px;
+    padding: 10px;
   }
 
   .vaccineslots {
