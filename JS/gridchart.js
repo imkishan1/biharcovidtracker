@@ -6,16 +6,12 @@ async function getcovidapiInf(){
     const jsdata2 = await jsondata2.json();
     const dataforchart = jsdata2.statewise;
     const size = Object.keys(dataforchart).length;
-  
-
     // if(dataforchart[])
     // dataforchart[15];
     // dataforchart.shift();
     const jsondata3 = await fetch('https://api.covid19india.org/v4/min/data.min.json');
     const dataj = await jsondata3.json();
     dataforchart.splice(31, 1);
-
-    // console.log(dataj);
     const dis = dataj['BR'].districts;
     const lengdist = Object.keys(dis).length;
     // console.log(dis);
@@ -66,14 +62,15 @@ if( dis[districts[i]].delta != null)
      
         dis[districts[i]].delta.vaccinated=0;
     }
-  
+  var totalvaccinated = parseInt(dis[districts[i]].total.vaccinated1) + parseInt(dis[districts[i]].total.vaccinated2)
+  var deltavaccinated = parseInt(dis[districts[i]].delta.vaccinated1) + parseInt(dis[districts[i]].delta.vaccinated2)
     var template = `<tr class="tablerow">
                      <td class="fixedright color">${districts[i]}</td>
                      <td class="dataletterspacing" > <span class="delta-confirmed"><i class="fas fa-arrow-up"></i>${dis[districts[i]].delta.confirmed.toLocaleString('en-IN')}</span><br>${dis[districts[i]].total.confirmed.toLocaleString('en-IN')}</td>
                      <td class="dataletterspacing"> ${active}</td>
                      <td class="dataletterspacing"> <span class="delta-confirmed recovered"><i class="fas fa-arrow-up"></i>${dis[districts[i]].delta.recovered.toLocaleString('en-IN')}</span><br>${dis[districts[i]].total.recovered.toLocaleString('en-IN')}</td>
                      <td class="dataletterspacing"> <span class="delta-confirmed deaths"><i class="fas fa-arrow-up"></i>${dis[districts[i]].delta.deceased.toLocaleString('en-IN')}</span><br>${dis[districts[i]].total.deceased.toLocaleString('en-IN')}</td>
-                     <td class="dataletterspacing"> <span class="delta-confirmed vaccinated"><i class="fas fa-arrow-up"></i>${numDifferentiation(dis[districts[i]].delta.vaccinated)}</span><br>${numDifferentiation(dis[districts[i]].total.vaccinated)}</td>
+                     <td class="dataletterspacing"> <span class="delta-confirmed vaccinated"><i class="fas fa-arrow-up"></i>${numDifferentiation(deltavaccinated)}</span><br>${numDifferentiation(totalvaccinated)}</td>
                      <td class="dataletterspacing">${numDifferentiation(dis[districts[i]].total.tested)}</td>
                      <td class="dataletterspacing"> ${numDifferentiation(dis[districts[i]].meta.population)}</td>
     </tr>`
@@ -85,6 +82,7 @@ else {
   var rec = dis[districts[i]].total.recovered;
   var deathsdistric = dis[districts[i]].total.deceased;
   active=((conf)-(rec+ deathsdistric));
+  var totalvaccinated = parseInt(dis[districts[i]].total.vaccinated1) + parseInt(dis[districts[i]].total.vaccinated2)
   // console.log(active);
   var template = `<tr class="tablerow">
                 
@@ -93,7 +91,7 @@ else {
   <td class="dataletterspacing">${active.toLocaleString('en-IN')}</td>
   <td class="dataletterspacing">${dis[districts[i]].total.recovered.toLocaleString('en-IN')}</td>
   <td class="dataletterspacing">${dis[districts[i]].total.deceased.toLocaleString('en-IN')}</td>
-  <td class="dataletterspacing">${numDifferentiation(dis[districts[i]].total.vaccinated)}</td>
+  <td class="dataletterspacing">${numDifferentiation(totalvaccinated)}</td>
   <td class="dataletterspacing">${numDifferentiation(dis[districts[i]].total.tested)}</td>
   <td class="dataletterspacing">${numDifferentiation(dis[districts[i]].meta.population)}</td>
   </tr>`
