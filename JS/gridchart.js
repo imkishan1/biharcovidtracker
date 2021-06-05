@@ -9,12 +9,14 @@ async function getcovidapiInf(){
     // if(dataforchart[])
     // dataforchart[15];
     // dataforchart.shift();
+    
     const jsondata3 = await fetch('https://api.covid19india.org/v4/min/data.min.json');
     const dataj = await jsondata3.json();
     dataforchart.splice(31, 1);
     const dis = dataj['BR'].districts;
     const lengdist = Object.keys(dis).length;
     // console.log(dis);
+    // console.log(dataj)
     var districts = ['Patna','Araria','Arwal', 'Aurangabad','Banka','Begusarai','Bhagalpur','Bhojpur','Buxar','Darbhanga',
     'East Champaran','Gaya','Gopalganj','Jamui','Jehanabad',
     'Kaimur','Katihar','Khagaria','Kishanganj','Lakhisarai',
@@ -57,10 +59,13 @@ if( dis[districts[i]].delta != null)
         dis[districts[i]].delta.recovered=0;
     }
   
-    if(dis[districts[i]].delta.vaccinated == null)
+    if(dis[districts[i]].delta.vaccinated1 == null)
     {
-     
-        dis[districts[i]].delta.vaccinated=0;
+        dis[districts[i]].delta.vaccinated1=0;
+    }
+    if(dis[districts[i]].delta.vaccinated2 == null)
+    {
+        dis[districts[i]].delta.vaccinated2=0;
     }
   var totalvaccinated = parseInt(dis[districts[i]].total.vaccinated1) + parseInt(dis[districts[i]].total.vaccinated2)
   var deltavaccinated = parseInt(dis[districts[i]].delta.vaccinated1) + parseInt(dis[districts[i]].delta.vaccinated2)
