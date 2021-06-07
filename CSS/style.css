@@ -729,6 +729,10 @@ ul li {
   margin-top: 10px;
   margin-bottom: 0px;
 }
+
+#refresh {
+  cursor: pointer;
+}
 /* Media queries */
 
 @media only screen and (max-width: 1100px) {

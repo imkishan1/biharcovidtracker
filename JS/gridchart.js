@@ -136,7 +136,10 @@ for(var i=0;i<size;i++)
 getcovidapiInf();
 
 
-
+// function refresh(){
+//   getcovidapiInf();
+//   console.log("Clicked")
+// }
 
 function numDifferentiation (val) {
     if (val >= 10000000) {
