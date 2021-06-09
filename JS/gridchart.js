@@ -140,6 +140,21 @@ for(var i=0;i<size;i++)
   }
   if(dataforchart[i].deltaconfirmed<0 || dataforchart[i].deltarecovered<0 || dataforchart[i].deltadeaths <0)
   {
+    var str;
+    var msg = document.getElementById('msg');
+    if(dataforchart[i].deltaconfirmed<0)
+    {
+      str="Confirmed";
+    }
+    if(dataforchart[i].deltarecovered<0)
+    {
+      str="Recovery";
+    }
+    if(dataforchart[i].deltadeaths<0)
+    {
+      str="Deceased";
+    }
+    msg.innerText =str;
     const warnin = document.querySelector('.warning');
     warnin.style.display = 'block';
   }
