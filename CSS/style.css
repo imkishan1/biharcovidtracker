@@ -250,6 +250,16 @@ footer .footer-element p a {
   color: var(--deceased);
 }
 
+#warning p {
+  margin: 0 auto;
+  font-size: 12px;
+  width: fit-content;
+  /* border: 1px solid red; */
+  display: none;
+  margin-bottom: 0px;
+  margin-bottom: 16px;
+}
+
 table {
   width: fit-content;
   margin: 0 auto;
@@ -802,7 +812,10 @@ ul li {
     padding-top: 40px;
     padding-bottom: 20px;
   }
-
+  #warning p{
+    width: 80%;
+    text-align: center;
+  }
   footer .footer-element p {
     text-align: center;
     float: none;

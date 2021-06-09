@@ -111,6 +111,8 @@ else {
 
 for(var i=0;i<size;i++)
 {
+  
+
   if(dataforchart[i].statecode=='BR')
   {
    const totalconfirmed = document.getElementById('conf');
@@ -134,7 +136,15 @@ for(var i=0;i<size;i++)
    const deltadeaths = document.getElementById('deltadeaths');
    deltadeaths.innerText = `+${dataforchart[i].deltadeaths.replace(/(\d)(?=(\d\d)+\d$)/g, "$1,")}`;
 
-
+   
+  }
+  if(dataforchart[i].deltaconfirmed<0 || dataforchart[i].deltarecovered<0 || dataforchart[i].deltadeaths <0)
+  {
+    const warnin = document.querySelector('.warning');
+    // warnin.style.removeProperty('display')
+    warnin.style.display = 'block';
+    // warnin.classList.add('displaynone')
+    console.log("here in if")
   }
 }
 }
