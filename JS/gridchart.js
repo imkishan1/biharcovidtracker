@@ -141,10 +141,7 @@ for(var i=0;i<size;i++)
   if(dataforchart[i].deltaconfirmed<0 || dataforchart[i].deltarecovered<0 || dataforchart[i].deltadeaths <0)
   {
     const warnin = document.querySelector('.warning');
-    // warnin.style.removeProperty('display')
     warnin.style.display = 'block';
-    // warnin.classList.add('displaynone')
-    console.log("here in if")
   }
 }
 }
