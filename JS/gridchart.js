@@ -47,6 +47,11 @@ if( dis[districts[i]].delta != null)
      
         dis[districts[i]].delta.deceased=0;
     }
+    if(dis[districts[i]].delta.confirmed == null)
+    {
+     
+        dis[districts[i]].delta.confirmed=0;
+    }
   
     if(dis[districts[i]].delta.tested == null)
     {
