@@ -144,15 +144,15 @@ for(var i=0;i<size;i++)
     var msg = document.getElementById('msg');
     if(dataforchart[i].deltaconfirmed<0)
     {
-      str="Confirmed";
+      str="confirmed";
     }
     if(dataforchart[i].deltarecovered<0)
     {
-      str="Recovery";
+      str="recovery";
     }
     if(dataforchart[i].deltadeaths<0)
     {
-      str="Deceased";
+      str="deceased";
     }
     msg.innerText =str;
     const warnin = document.querySelector('.warning');
