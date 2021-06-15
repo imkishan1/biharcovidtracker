@@ -870,7 +870,29 @@ ul li {
   .maindiv {
     width: 100%;
   }
-
+  .col-sm-6 {
+    width: 25%;
+    margin: 0px;
+    padding: 2px;
+  }
+  .sqrcards .elements .cardheading h4  {
+    font-size: 13px;
+    /* padding: 0px; */
+  }
+  .sqrcards .elements {
+    padding: 0px;
+  }
+  .sqrcards .elements p {
+    font-size: 15px;
+  }
+.sqrcards .elements{
+  display: flex;
+  margin-bottom: 0px;
+  flex-direction: column-reverse;
+}
+.maindata{
+  margin-bottom: 0px;
+}
 }
 
 @media only screen and (max-width: 412px) {
