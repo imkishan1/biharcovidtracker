@@ -893,6 +893,9 @@ ul li {
 .maindata{
   margin-bottom: 0px;
 }
+.maindiv{
+  margin-top: 0px;
+}
 .data {
   min-height: fit-content;
 }
