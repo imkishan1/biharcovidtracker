@@ -295,6 +295,8 @@ table {
   font-weight: 700;
   color: #6c757d;
   border-radius: 3px;
+  display: flex;
+  align-items: center;
 }
 .color {
   background-color: rgb(245, 243, 243) !important;
@@ -318,6 +320,8 @@ tr:hover td {
   cursor: pointer;
   color: #6c757d;
   border-radius: 3px; 
+  display: flex;
+  align-items: center;
 }
 .dataletterspacing {
   letter-spacing: 1.3px;
