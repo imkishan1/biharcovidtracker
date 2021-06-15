@@ -893,6 +893,9 @@ ul li {
 .maindata{
   margin-bottom: 0px;
 }
+.data {
+  min-height: fit-content;
+}
 }
 
 @media only screen and (max-width: 412px) {
