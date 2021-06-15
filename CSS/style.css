@@ -6,14 +6,16 @@
   --white-text: #fbf2ea;
   --white-text-light: #fbf2ea88;
   --white-text-grey: #f0f0f0;
-  --recovered: #72c217;
+  /* --recovered: #72c217; */
+  --recovered: #28a745;
   --background-dark-blue: #1e1e30;
   --background-dark-blue2: #232333;
   --vaccine: rgb(216, 48, 102);
   /* --background-dark-blue3:#159c42; */
   /* --recovered:#28A745;; */
   --active: #007bff;
-  --newcases: #d63152;
+  /* --newcases: #d63152; */
+  --newcases: #ff073a;
   --totalcases: #883ed5;
   /* --deceased:#ff073a; */
   --dark-mode-bg:rgb(31, 27, 37);
