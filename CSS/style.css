@@ -61,6 +61,9 @@ nav{
   padding: 0px;
   line-height: 30px;
   height: 40px;
+  /* position: sticky;
+  top: 0;
+  z-index: 1000000; */
   color: var(--white-text-light);
   /* background-color: var(--newcases); */
   background-color: rgb(98, 60, 187);
