@@ -69,9 +69,7 @@ nav{
   background-color: rgb(98, 60, 187);
   
 }
-nav marquee {
-  /* border: 1px solid green; */
-}
+
 nav marquee ul{
   display: flex;
   list-style: none;
@@ -81,6 +79,7 @@ nav marquee ul li{
   display: inline;
   color: #fff;
   padding: 5px;
+  font-size: 13px;
   margin: 0px 10px;
 }
 /* //Navbar ended here */
