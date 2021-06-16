@@ -26,7 +26,10 @@ async function getcovidapiInf(){
     'Supaul','Vaishali','West Champaran']
 
 var active;
-
+var cnf_nav = document.getElementById('vaccine1')
+var vac_nav = document.getElementById('vaccine2')
+cnf_nav.innerText= `${dataj['BR'].total.vaccinated1.toLocaleString('en-IN')}`
+vac_nav.innerText= `${dataj['BR'].total.vaccinated2.toLocaleString('en-IN')}`
 const bihar = document.getElementById('bihar');
 for(var i=0;i<lengdist;i++)
 {

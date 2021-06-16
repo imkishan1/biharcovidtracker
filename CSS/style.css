@@ -82,6 +82,10 @@ nav marquee ul li{
   font-size: 13px;
   margin: 0px 10px;
 }
+.white-txt {
+  color: white;
+  font-weight: 400;
+}
 /* //Navbar ended here */
 .headline {
   padding: 30px;
