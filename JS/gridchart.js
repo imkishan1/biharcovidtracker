@@ -16,7 +16,7 @@ async function getcovidapiInf(){
     const dis = dataj['BR'].districts;
     const lengdist = Object.keys(dis).length;
     // console.log(dis);
-    console.log(dataj)
+    // console.log(dataj)
     var districts = ['Patna','Araria','Arwal', 'Aurangabad','Banka','Begusarai','Bhagalpur','Bhojpur','Buxar','Darbhanga',
     'East Champaran','Gaya','Gopalganj','Jamui','Jehanabad',
     'Kaimur','Katihar','Khagaria','Kishanganj','Lakhisarai',
@@ -31,29 +31,6 @@ var vac_nav = document.getElementById('vaccine2')
 cnf_nav.innerText= `${dataj['BR'].total.vaccinated1.toLocaleString('en-IN')}`
 vac_nav.innerText= `${dataj['BR'].total.vaccinated2.toLocaleString('en-IN')}`
 const bihar = document.getElementById('bihar');
-
-
-// Delta data
-
-const totalconfirmed = document.getElementById('conf');
-totalconfirmed.innerText = `${dataj['BR'].total.confirmed.toLocaleString('en-IN')}`;
-
-const deltaconf = document.getElementById('deltacnf');
-deltaconf.innerText = `+${dataj['BR'].delta.confirmed.toLocaleString('en-IN')}`;
-
-
-const totalrecoverd = document.getElementById('recovered');
-totalrecoverd.innerText = `${dataj['BR'].total.recovered.toLocaleString('en-IN')}`;
-
-const deltarecov = document.getElementById('deltarecov');
-deltarecov.innerText = `+${dataj['BR'].delta.recovered.toLocaleString('en-IN')}`;
-
-const deaths = document.getElementById('deaths');
-deaths.innerText = `${dataj['BR'].total.deceased.toLocaleString('en-IN')}`;
-
-const deltadeaths = document.getElementById('deltadeaths');
-deltadeaths.innerText = `+${dataj['BR'].delta.deceased.toLocaleString('en-IN')}`;
-
 
 for(var i=0;i<lengdist;i++)
 {
@@ -136,12 +113,55 @@ else {
 }
 }
 
+// Delta data
+if(dataj['BR'].delta!=null)
+{
+const totalconfirmed = document.getElementById('conf');
+totalconfirmed.innerText = `${dataj['BR'].total.confirmed.toLocaleString('en-IN')}`;
+
+const deltaconf = document.getElementById('deltacnf');
+deltaconf.innerText = `+${dataj['BR'].delta.confirmed.toLocaleString('en-IN')}`;
+
+
+const totalrecoverd = document.getElementById('recovered');
+totalrecoverd.innerText = `${dataj['BR'].total.recovered.toLocaleString('en-IN')}`;
+
+const deltarecov = document.getElementById('deltarecov');
+deltarecov.innerText = `+${dataj['BR'].delta.recovered.toLocaleString('en-IN')}`;
+
+const deaths = document.getElementById('deaths');
+deaths.innerText = `${dataj['BR'].total.deceased.toLocaleString('en-IN')}`;
+
+const deltadeaths = document.getElementById('deltadeaths');
+deltadeaths.innerText = `+${dataj['BR'].delta.deceased.toLocaleString('en-IN')}`;
+}
+else{
+
 for(var i=0;i<size;i++)
 {
   if(dataforchart[i].statecode=='BR')
   {
+    const totalconfirmed = document.getElementById('conf');
+    totalconfirmed.innerText = `${dataforchart[i].confirmed.replace(/(\d)(?=(\d\d)+\d$)/g, "$1,")}`;
+
    const totalactive = document.getElementById('active');
    totalactive.innerText = `${dataforchart[i].active.replace(/(\d)(?=(\d\d)+\d$)/g, "$1,")}`;
+
+   const deltaconf = document.getElementById('deltacnf');
+   deltaconf.innerText = `+${dataforchart[i].deltaconfirmed.replace(/(\d)(?=(\d\d)+\d$)/g, "$1,")}`;
+
+
+  const totalrecoverd = document.getElementById('recovered');
+  totalrecoverd.innerText = `${dataforchart[i].recovered.replace(/(\d)(?=(\d\d)+\d$)/g, "$1,")}`;
+
+  const deltarecov = document.getElementById('deltarecov');
+  deltarecov.innerText = `+${dataforchart[i].deltarecovered.replace(/(\d)(?=(\d\d)+\d$)/g, "$1,")}`;
+
+  const deaths = document.getElementById('deaths');
+  deaths.innerText = `${dataforchart[i].deaths.replace(/(\d)(?=(\d\d)+\d$)/g, "$1,")}`;
+
+  const deltadeaths = document.getElementById('deltadeaths');
+  deltadeaths.innerText = `+${dataforchart[i].deltadeaths.replace(/(\d)(?=(\d\d)+\d$)/g, "$1,")}`;
 
   }
   if(dataforchart[i].deltaconfirmed<0 || dataforchart[i].deltarecovered<0 || dataforchart[i].deltadeaths <0)
@@ -164,6 +184,7 @@ for(var i=0;i<size;i++)
     const warnin = document.querySelector('.warning');
     warnin.style.display = 'block';
   }
+}
 }
 }
 getcovidapiInf();
