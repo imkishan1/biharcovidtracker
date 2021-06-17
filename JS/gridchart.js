@@ -16,7 +16,7 @@ async function getcovidapiInf(){
     const dis = dataj['BR'].districts;
     const lengdist = Object.keys(dis).length;
     // console.log(dis);
-    // console.log(dataj)
+    console.log(dataj)
     var districts = ['Patna','Araria','Arwal', 'Aurangabad','Banka','Begusarai','Bhagalpur','Bhojpur','Buxar','Darbhanga',
     'East Champaran','Gaya','Gopalganj','Jamui','Jehanabad',
     'Kaimur','Katihar','Khagaria','Kishanganj','Lakhisarai',
@@ -116,6 +116,9 @@ else {
 // Delta data
 if(dataj['BR'].delta!=null)
 {
+
+
+
 const totalconfirmed = document.getElementById('conf');
 totalconfirmed.innerText = `${dataj['BR'].total.confirmed.toLocaleString('en-IN')}`;
 
@@ -134,6 +137,11 @@ deaths.innerText = `${dataj['BR'].total.deceased.toLocaleString('en-IN')}`;
 
 const deltadeaths = document.getElementById('deltadeaths');
 deltadeaths.innerText = `+${dataj['BR'].delta.deceased.toLocaleString('en-IN')}`;
+
+var active_header = (parseInt(dataj['BR'].total.confirmed) - ( parseInt(dataj['BR'].total.recovered)+ parseInt(dataj['BR'].total.deceased)+1)).toString();
+const totalactive = document.getElementById('active');
+totalactive.innerText = `${active_header.replace(/(\d)(?=(\d\d)+\d$)/g, "$1,")}`;
+
 }
 else{
 
