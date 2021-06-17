@@ -927,6 +927,10 @@ ul li {
 .maindiv{
   margin-top: 0px;
 }
+.data span{
+  font-size: 12px;
+  opacity: 0.8;
+}
 .data {
   min-height: fit-content;
 }
@@ -1012,5 +1016,11 @@ ul li {
   }
   .download {
     width: 250px;
+  }
+  .sqrcards .elements .cardheading h4  {
+    font-size: 12px;
+  }
+  .sqrcards .elements p {
+    font-size: 14px;
   }
 }
