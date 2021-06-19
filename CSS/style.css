@@ -341,7 +341,7 @@ tr:hover td {
   background-color: var(--white-text-grey) !important;
 }
 
-tr:nth-last-child(odd) td{
+tr:nth-last-child(even) td{
   background-color:transparent;
 }
 
