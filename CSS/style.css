@@ -317,7 +317,8 @@ table {
   /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
   /* background-color: var(--background-dark-blue); */
 
-  background-color: rgb(245, 243, 243);
+  /* background-color: rgb(245, 243, 243); */
+  background-color: var(--white-text-grey);
   min-width: 120px;
   max-width: 120px;
   padding: 10px;
@@ -330,14 +331,20 @@ table {
   align-items: center;
 }
 .color {
-  background-color: rgb(245, 243, 243) !important;
+  /* background-color: rgb(245, 243, 243) !important; */
   /* background-color: var(--background-dark-blue) !important; */
   font-weight: 700 !important;
 }
 tr:hover td {
   transition: 0.2s all ease-in-out;
-  background-color: rgb(245, 243, 243) !important;
+  /* background-color: rgb(245, 243, 243) !important; */
+  background-color: var(--white-text-grey) !important;
 }
+
+tr:nth-last-child(odd) td{
+  background-color:transparent;
+}
+
 .tablerow td {
   /* vertical-align: text-bottom; */
   /* background-color: var(--background-dark-blue2); */
@@ -380,6 +387,7 @@ tr:hover td {
   left: 0;
   display: flex;
   align-items: center;
+  background-color: var(--white-text-grey) !important;
 }
 
 .card-rectangle {
