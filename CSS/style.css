@@ -341,9 +341,9 @@ tr:hover td {
   background-color: var(--white-text-grey) !important;
 }
 
-/* tr:nth-last-child(even) td{
+tr:nth-last-child(even) td{
   background-color:transparent;
-} */
+}
 
 .tablerow td {
   /* vertical-align: text-bottom; */
