@@ -322,7 +322,7 @@ table {
   min-width: 120px;
   max-width: 120px;
   padding: 10px;
-  margin: 2px;
+  margin: 0px 4px 4px 0px;
   font-weight: 700;
   color: #6c757d;
   border-radius: 3px;
@@ -341,16 +341,16 @@ tr:hover td {
   background-color: var(--white-text-grey) !important;
 }
 
-tr:nth-last-child(even) td{
+/* tr:nth-last-child(even) td{
   background-color:transparent;
-}
+} */
 
 .tablerow td {
   /* vertical-align: text-bottom; */
   /* background-color: var(--background-dark-blue2); */
   padding: 10px;
   background-color: rgb(245, 245, 248);
-  margin: 2px;
+  margin: 0px 4px 4px 0px;
   min-width: 120px;
   max-width: 120px;
   max-height: fit-content;
@@ -461,9 +461,7 @@ tr:nth-last-child(even) td{
   width: 89%;
   animation: .5s forwards;
   border-radius: 4px;
-  /* background-color: rgba(80, 48, 155, 0.192); */
-  /* background-color: rgba(155, 48, 123, 0.192); */
-  background-color: var(--white-text-grey);
+  background-color: #f5f5f8;
 }
 
 .heading {
@@ -847,6 +845,7 @@ ul li {
     padding-top: 30px;
     padding-bottom: 30px;
     width: 98%;
+    background-color: var(--white-text-grey);
   }
   footer .footer-element p {
    
@@ -855,6 +854,7 @@ ul li {
   .icons-set2 {
     float: none;
   }
+  
 }
 @media only screen and (max-width: 500px) {
   footer {
