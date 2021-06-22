@@ -13,29 +13,31 @@ function getstatus() {
     const getdata = await jsonurl.json();
     const size = Object.keys(getdata.centers).length;
     const cardul = document.getElementById("ulid");
-  
+    // console.log(getdata);
     var text = "Sorry, No Vaccination center is available for booking.";
     $('#ulid .centerdetails').empty().append();
     if (size != 0) {
       for (var i = 0; i < size; i++) {
+        var sessions_size = Object.keys(getdata.centers[i].sessions).length;
+        for(var j =0;j<sessions_size;j++){
         var card = `  <li class="centerdetails">
             <div class="result-element">
               <div class="hospitalname">
                 <h5 id="name">${getdata.centers[i].name}</h5>
                 <div id="add" class="hospital-address">
                   ${getdata.centers[i].address}
-                  <p>${getdata.centers[i].sessions[0].vaccine}</p> 
+                  <p>${getdata.centers[i].sessions[j].vaccine}</p> 
                   <div class="free"><h6>${getdata.centers[i].fee_type}</h6> 
                   </div>
                 </div>
               </div>
               <div class="slotsavail">
               <div class="circle">
-              <h6>${getdata.centers[i].sessions[0].min_age_limit + "+"}</h6>
+              <h6>${getdata.centers[i].sessions[j].min_age_limit + "+"}</h6>
             </div>
                 <h5>Slots Available</h5>
                 <h6 id="slots">${
-                  getdata.centers[i].sessions[0].available_capacity
+                  getdata.centers[i].sessions[j].available_capacity
                 }</h6>
               </div>
             </div>
@@ -43,6 +45,7 @@ function getstatus() {
         `;
         cardul.innerHTML += card;       
       }
+    }
     } else {
       $('#ulid .centerdetails').empty().append();
         var card = `<li class="centerdetails"><div class="notfound"><p class="notfoundtxt">${text}</p></div></li>`;
