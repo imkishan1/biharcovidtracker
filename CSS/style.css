@@ -359,7 +359,7 @@ tr:nth-last-child(even) td{
   font-weight: 600;
   cursor: pointer;
   color: #6c757d;
-  display: flex;
+  /* display: flex; */
   border-radius: 3px; 
 }
 .dataletterspacing {
