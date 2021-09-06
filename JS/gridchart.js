@@ -2,7 +2,7 @@
 
 async function getcovidapiInf(){
 
-    const jsondata2 = await fetch('https://api.covid19india.org/data.json');
+    const jsondata2 = await fetch('https://data.covid19india.org/data.json');
     const jsdata2 = await jsondata2.json();
     const dataforchart = jsdata2.statewise;
     const size = Object.keys(dataforchart).length;
@@ -10,7 +10,7 @@ async function getcovidapiInf(){
     // dataforchart[15];
     // dataforchart.shift();
     // console.log(dataforchart)
-    const jsondata3 = await fetch('https://api.covid19india.org/v4/min/data.min.json');
+    const jsondata3 = await fetch('https://data.covid19india.org/v4/min/data.min.json');
     const dataj = await jsondata3.json();
     dataforchart.splice(31, 1);
     const dis = dataj['BR'].districts;
